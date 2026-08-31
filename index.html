@@ -8,6 +8,7 @@
   <title>Ալիկ և Արևիկ | Հարսանիք</title>
 
   <style>
+
     * {
       box-sizing: border-box;
     }
@@ -24,7 +25,11 @@
       text-align: center;
     }
 
-    /* MAIN SCREEN */
+
+    /* =========================
+       MAIN SCREEN
+    ========================= */
+
     .hero {
       min-height: 100vh;
       display: flex;
@@ -65,14 +70,23 @@
       font-size: 18px;
     }
 
+
+    /* =========================
+       BUTTON
+    ========================= */
+
     .button {
       display: inline-block;
       margin-top: 35px;
       padding: 15px 32px;
+
       background: #333;
       color: white;
+
       text-decoration: none;
+
       border-radius: 30px;
+
       transition: 0.3s;
     }
 
@@ -81,7 +95,11 @@
       opacity: 0.85;
     }
 
-    /* INVITATION DETAILS */
+
+    /* =========================
+       DETAILS SECTION
+    ========================= */
+
     .details {
       min-height: 100vh;
       padding: 100px 20px;
@@ -97,9 +115,15 @@
     .invitation-text {
       max-width: 600px;
       margin: 0 auto 50px;
+
       font-size: 19px;
       line-height: 1.9;
     }
+
+
+    /* =========================
+       INFORMATION
+    ========================= */
 
     .info {
       margin: 40px auto;
@@ -117,21 +141,93 @@
       line-height: 1.7;
     }
 
+
+    /* =========================
+       DRESS CODE
+    ========================= */
+
+    .dress-code {
+      margin-top: 70px;
+      margin-bottom: 70px;
+
+      padding: 45px 25px;
+
+      max-width: 550px;
+
+      background: #faf8f4;
+
+      border-radius: 20px;
+    }
+
+    .dress-code h3 {
+      font-size: 27px;
+      margin-top: 0;
+      margin-bottom: 18px;
+    }
+
+    .dress-code p {
+      margin-bottom: 0;
+      font-size: 18px;
+    }
+
+
+    /* =========================
+       HEART
+    ========================= */
+
     .heart {
       font-size: 25px;
       margin: 40px 0;
     }
 
-    /* MOBILE */
+
+    /* =========================
+       FINAL TEXT
+    ========================= */
+
+    .final-text {
+      margin-top: 50px;
+      margin-bottom: 30px;
+
+      font-size: 18px;
+      line-height: 1.7;
+    }
+
+    .final-names {
+      font-size: 24px;
+      font-weight: normal;
+    }
+
+
+    /* =========================
+       MOBILE
+    ========================= */
+
     @media (max-width: 600px) {
+
+      .hero {
+        padding: 25px 20px;
+      }
 
       .small-title {
         font-size: 12px;
         letter-spacing: 2px;
       }
 
+      h1 {
+        font-size: 55px;
+      }
+
+      .ampersand {
+        font-size: 38px;
+      }
+
       .date {
         font-size: 18px;
+      }
+
+      .time {
+        font-size: 17px;
       }
 
       .details {
@@ -141,14 +237,32 @@
       .details h2 {
         font-size: 32px;
       }
+
+      .invitation-text {
+        font-size: 17px;
+      }
+
+      .dress-code {
+        padding: 35px 20px;
+      }
+
+      .dress-code h3 {
+        font-size: 23px;
+      }
+
     }
+
   </style>
+
 </head>
 
 
 <body>
 
-  <!-- MAIN SCREEN -->
+
+  <!-- =========================
+       MAIN SCREEN
+  ========================== -->
 
   <section class="hero">
 
@@ -157,13 +271,19 @@
     </div>
 
 
-    <h1>Ալիկ</h1>
+    <h1>
+      Ալիկ
+    </h1>
+
 
     <div class="ampersand">
       &
     </div>
 
-    <h1>Արևիկ</h1>
+
+    <h1>
+      Արևիկ
+    </h1>
 
 
     <div class="date">
@@ -184,9 +304,12 @@
 
 
 
-  <!-- INVITATION DETAILS -->
+  <!-- =========================
+       INVITATION
+  ========================== -->
 
   <section id="details" class="details">
+
 
     <h2>
       Սիրով հրավիրում ենք Ձեզ
@@ -207,10 +330,14 @@
     </div>
 
 
+
     <div class="heart">
       ♡
     </div>
 
+
+
+    <!-- DATE -->
 
     <div class="info">
 
@@ -225,6 +352,9 @@
     </div>
 
 
+
+    <!-- TIME -->
+
     <div class="info">
 
       <h3>
@@ -237,6 +367,9 @@
 
     </div>
 
+
+
+    <!-- LOCATION -->
 
     <div class="info">
 
@@ -251,24 +384,56 @@
     </div>
 
 
+
     <div class="heart">
       ♡
     </div>
 
 
-    <p>
+
+    <!-- =========================
+         DRESS CODE
+    ========================== -->
+
+    <div class="info dress-code">
+
+      <h3>
+        Դրես-կոդ՝ Էլեգանտ ✨
+      </h3>
+
+      <p>
+        <em>
+          Սպիտակը թողնենք հարսնացուին։
+        </em>
+      </p>
+
+    </div>
+
+
+
+    <div class="heart">
+      ♡
+    </div>
+
+
+
+    <!-- FINAL -->
+
+    <div class="final-text">
 
       Սիրով՝
 
       <br><br>
 
-      <strong>
+      <span class="final-names">
         Ալիկ և Արևիկ
-      </strong>
+      </span>
 
-    </p>
+    </div>
+
 
   </section>
+
 
 </body>
 
