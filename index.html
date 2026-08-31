@@ -3,29 +3,67 @@
 
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <meta name="viewport"
+        content="width=device-width, initial-scale=1.0">
+
+  <meta name="theme-color" content="#f4f0eb">
 
   <title>Ալիկ և Արևիկ | 03.10.2026</title>
 
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <!-- Google fonts for long readable Armenian text -->
+  <link rel="preconnect"
+        href="https://fonts.googleapis.com">
+
+  <link rel="preconnect"
+        href="https://fonts.gstatic.com"
+        crossorigin>
 
   <link
     href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Noto+Sans+Armenian:wght@300;400;500;600&family=Noto+Serif+Armenian:wght@300;400;500;600&display=swap"
-    rel="stylesheet"
-  >
+    rel="stylesheet">
 
   <style>
 
-    :root {
-      --background: #f4f1ed;
-      --white: #ffffff;
-      --text: #342f2b;
-      --soft-text: #796f68;
-      --accent: #aa8c70;
-      --light-accent: #ded1c5;
-      --dark: #302a26;
+    /* =====================================================
+       CUSTOM ARMENIAN FONT
+    ===================================================== */
+
+    @font-face {
+      font-family: "ArmCaps";
+      src: url("ArmcapsU.ttf") format("truetype");
+      font-weight: normal;
+      font-style: normal;
+      font-display: swap;
     }
+
+
+    /* =====================================================
+       VARIABLES
+    ===================================================== */
+
+    :root {
+      --background: #f4f0eb;
+      --background-2: #ebe4dc;
+
+      --white: #ffffff;
+
+      --text: #352f2b;
+      --soft-text: #7c7169;
+
+      --accent: #ae9278;
+      --accent-light: #d9cabd;
+
+      --dark: #302a26;
+
+      --shadow:
+        0 18px 50px rgba(48, 42, 38, 0.08);
+    }
+
+
+    /* =====================================================
+       RESET
+    ===================================================== */
 
     * {
       box-sizing: border-box;
@@ -37,17 +75,36 @@
 
     body {
       margin: 0;
+
       background: var(--background);
+
       color: var(--text);
-      font-family: "Noto Serif Armenian", serif;
+
+      font-family:
+        "Noto Serif Armenian",
+        serif;
+
       text-align: center;
+
+      overflow-x: hidden;
+    }
+
+    img {
+      max-width: 100%;
     }
 
     button,
     input,
     select,
     textarea {
-      font-family: "Noto Sans Armenian", sans-serif;
+      font-family:
+        "Noto Sans Armenian",
+        sans-serif;
+    }
+
+    button,
+    a {
+      -webkit-tap-highlight-color: transparent;
     }
 
     .container {
@@ -56,36 +113,69 @@
     }
 
 
-    /* =========================
+    /* =====================================================
+       DECORATIVE ARMENIAN FONT
+    ===================================================== */
+
+    .main-names,
+    .section-title,
+    .dress-title,
+    .event-title,
+    .final-names {
+      font-family:
+        "ArmCaps",
+        "Noto Serif Armenian",
+        serif;
+
+      font-weight: normal;
+    }
+
+
+    /* =====================================================
        SAVE THE DATE
-    ========================= */
+    ===================================================== */
 
     .save-date {
       min-height: 100vh;
-      padding: 70px 0 60px;
 
       display: flex;
       align-items: center;
+
+      padding: 65px 0;
     }
 
     .save-title {
-      font-family: "Great Vibes", cursive;
-      font-size: clamp(58px, 9vw, 115px);
+      margin: 0 0 45px;
+
+      font-family:
+        "Great Vibes",
+        cursive;
+
+      font-size:
+        clamp(60px, 9vw, 120px);
+
       font-weight: normal;
+
       line-height: 1;
 
-      margin: 0 0 50px;
+      color: #332d29;
     }
 
+
+    /* THREE PHOTOS */
+
     .date-gallery {
+      max-width: 920px;
+
       display: grid;
-      grid-template-columns: repeat(3, 1fr);
 
-      gap: 20px;
+      grid-template-columns:
+        repeat(3, 1fr);
 
-      max-width: 900px;
+      gap: 18px;
 
-      margin: 0 auto 55px;
+      margin:
+        0 auto 50px;
     }
 
     .date-photo {
@@ -95,133 +185,186 @@
 
       overflow: hidden;
 
-      background-image: url("hero.png.PNG");
       background-size: cover;
 
-      box-shadow: 0 15px 40px rgba(0, 0, 0, 0.08);
+      background-position: center;
+
+      box-shadow: var(--shadow);
     }
 
+
+    /* each image */
+
     .photo-one {
-      background-position: 25% center;
+      background-image:
+        url("photo1.jpg");
     }
 
     .photo-two {
-      background-position: 50% center;
+      background-image:
+        url("photo2.jpg");
     }
 
     .photo-three {
-      background-position: 75% center;
+      background-image:
+        url("photo3.jpg");
     }
+
+
+    /* subtle photo darkening */
 
     .date-photo::after {
       content: "";
 
       position: absolute;
+
       inset: 0;
 
       background:
         linear-gradient(
           to top,
-          rgba(0, 0, 0, 0.30),
-          rgba(0, 0, 0, 0)
+          rgba(0, 0, 0, 0.32),
+          rgba(0, 0, 0, 0.02) 55%
         );
     }
+
+
+    /* 03 / 10 / 26 */
 
     .date-number {
       position: absolute;
 
       left: 50%;
-      bottom: 12px;
-
-      transform: translateX(-50%);
+      bottom: 8px;
 
       z-index: 2;
 
+      transform:
+        translateX(-50%);
+
       color: white;
 
-      font-family: Georgia, serif;
+      font-family:
+        Georgia,
+        serif;
 
-      font-size: clamp(65px, 8vw, 125px);
+      font-size:
+        clamp(70px, 8vw, 130px);
 
-      line-height: 1;
+      line-height: 0.95;
+
+      font-weight: normal;
     }
+
+
+    /* ALIK & AREVIK */
 
     .main-names {
       margin: 0;
 
-      font-size: clamp(42px, 6vw, 76px);
+      font-size:
+        clamp(48px, 6vw, 82px);
 
-      font-weight: 300;
+      line-height: 1.2;
+
+      color: #322c28;
     }
+
 
     .getting-married {
-      margin-top: 22px;
+      margin-top: 18px;
 
-      font-family: "Noto Sans Armenian", sans-serif;
+      font-family:
+        "Noto Sans Armenian",
+        sans-serif;
 
-      font-size: 13px;
+      font-size: 12px;
 
       letter-spacing: 7px;
+
+      color: var(--soft-text);
     }
 
-    .scroll-button {
-      display: inline-block;
 
-      margin-top: 35px;
+    /* invitation button */
+
+    .main-button {
+      display: inline-flex;
+
+      align-items: center;
+      justify-content: center;
+
+      margin-top: 34px;
 
       padding: 14px 30px;
 
-      border: 1px solid var(--accent);
+      border:
+        1px solid var(--accent);
+
       border-radius: 50px;
 
       text-decoration: none;
 
       color: var(--text);
 
-      font-family: "Noto Sans Armenian", sans-serif;
+      font-family:
+        "Noto Sans Armenian",
+        sans-serif;
 
-      transition: 0.3s;
+      font-size: 14px;
+
+      transition:
+        0.3s ease;
     }
 
-    .scroll-button:hover {
-      background: var(--accent);
+    .main-button:hover {
+      background:
+        var(--accent);
+
       color: white;
+
+      transform:
+        translateY(-2px);
     }
 
 
-    /* =========================
-       COMMON
-    ========================= */
+    /* =====================================================
+       COMMON SECTIONS
+    ===================================================== */
 
     .section {
-      padding: 100px 20px;
+      padding: 105px 20px;
     }
 
     .white-section {
-      background: var(--white);
+      background: white;
     }
 
     .section-title {
       margin: 0;
 
-      font-size: clamp(30px, 4vw, 42px);
+      font-size:
+        clamp(34px, 4.5vw, 52px);
 
-      font-weight: 400;
+      line-height: 1.35;
     }
 
     .gold-line {
       width: 55px;
+
       height: 1px;
 
-      margin: 28px auto;
+      background:
+        var(--accent);
 
-      background: var(--accent);
+      margin:
+        28px auto;
     }
 
 
-    /* =========================
+    /* =====================================================
        INVITATION
-    ========================= */
+    ===================================================== */
 
     .invitation-text {
       max-width: 680px;
@@ -229,6 +372,7 @@
       margin: auto;
 
       font-size: 18px;
+
       line-height: 2;
 
       font-weight: 300;
@@ -237,101 +381,147 @@
     .big-date {
       margin-top: 45px;
 
-      font-family: Georgia, serif;
+      font-family:
+        Georgia,
+        serif;
 
       font-size: 29px;
 
-      letter-spacing: 4px;
+      letter-spacing: 5px;
     }
 
 
-    /* =========================
+    /* =====================================================
        COUNTDOWN
-    ========================= */
+    ===================================================== */
 
-    .countdown-wrapper {
-      display: flex;
+    .countdown-section {
+      background:
+        linear-gradient(
+          180deg,
+          var(--background),
+          #eee8e1
+        );
+    }
 
-      justify-content: center;
+    .countdown {
+      max-width: 720px;
 
-      flex-wrap: wrap;
+      margin:
+        48px auto 0;
 
-      gap: 40px;
+      display: grid;
 
-      margin-top: 45px;
+      grid-template-columns:
+        repeat(4, 1fr);
+
+      gap: 16px;
     }
 
     .countdown-item {
-      min-width: 90px;
+      padding:
+        28px 10px;
+
+      background:
+        rgba(255,255,255,0.55);
+
+      border:
+        1px solid
+        rgba(174,146,120,0.22);
+
+      border-radius: 18px;
     }
 
     .countdown-number {
       display: block;
 
-      font-family: Georgia, serif;
+      font-family:
+        Georgia,
+        serif;
 
-      font-size: 45px;
+      font-size: 42px;
+
+      line-height: 1;
     }
 
     .countdown-label {
       display: block;
 
-      margin-top: 7px;
+      margin-top: 10px;
 
-      font-family: "Noto Sans Armenian", sans-serif;
+      font-family:
+        "Noto Sans Armenian",
+        sans-serif;
+
+      color:
+        var(--soft-text);
 
       font-size: 12px;
-
-      color: var(--soft-text);
     }
 
 
-    /* =========================
-       PROGRAM
-    ========================= */
+    /* =====================================================
+       WEDDING PROGRAM
+    ===================================================== */
 
     .program-grid {
-      display: grid;
-
-      grid-template-columns: repeat(2, 1fr);
-
-      gap: 25px;
-
       max-width: 850px;
 
-      margin: 50px auto 0;
+      margin:
+        50px auto 0;
+
+      display: grid;
+
+      grid-template-columns:
+        repeat(2, 1fr);
+
+      gap: 25px;
     }
 
     .program-card {
-      padding: 45px 25px;
+      padding:
+        48px 28px;
 
-      border-radius: 20px;
+      background:
+        var(--background);
 
-      background: var(--white);
+      border-radius: 24px;
 
-      box-shadow: 0 12px 35px rgba(0, 0, 0, 0.045);
+      border:
+        1px solid
+        rgba(174,146,120,0.18);
+
+      box-shadow:
+        0 15px 40px
+        rgba(0,0,0,0.035);
     }
 
     .event-icon {
-      font-size: 35px;
+      font-size: 34px;
+
+      margin-bottom: 15px;
     }
 
     .event-title {
-      margin: 18px 0 15px;
+      margin:
+        0 0 15px;
 
-      font-size: 23px;
+      font-size: 29px;
 
-      font-weight: 400;
+      line-height: 1.4;
     }
 
     .event-time {
-      margin-bottom: 12px;
+      margin-bottom: 13px;
 
-      color: var(--accent);
+      color:
+        var(--accent);
 
-      font-family: Georgia, serif;
+      font-family:
+        Georgia,
+        serif;
 
-      font-size: 34px;
+      font-size: 36px;
     }
 
     .event-place {
@@ -342,58 +532,81 @@
       line-height: 1.6;
     }
 
+
+    /* MAP BUTTON */
+
     .map-button {
-      display: inline-block;
+      display: inline-flex;
+
+      align-items: center;
+
+      justify-content: center;
 
       margin-top: 25px;
 
-      padding: 12px 22px;
+      padding:
+        12px 22px;
 
-      border: 1px solid var(--accent);
+      border:
+        1px solid var(--accent);
 
-      border-radius: 30px;
+      border-radius: 40px;
+
+      color:
+        var(--text);
 
       text-decoration: none;
 
-      color: var(--text);
-
-      font-family: "Noto Sans Armenian", sans-serif;
+      font-family:
+        "Noto Sans Armenian",
+        sans-serif;
 
       font-size: 14px;
 
-      transition: 0.3s;
+      transition:
+        0.3s ease;
     }
 
     .map-button:hover {
-      background: var(--accent);
       color: white;
+
+      background:
+        var(--accent);
     }
 
 
-    /* =========================
+    /* =====================================================
        DRESS CODE
-    ========================= */
+    ===================================================== */
+
+    .dress-section {
+      background:
+        var(--background);
+    }
 
     .dress-card {
-      max-width: 650px;
+      max-width: 680px;
 
       margin: auto;
 
-      padding: 55px 25px;
+      padding:
+        60px 30px;
 
-      border: 1px solid var(--light-accent);
+      border:
+        1px solid
+        var(--accent-light);
 
-      border-radius: 25px;
+      background:
+        rgba(255,255,255,0.48);
 
-      background: rgba(255, 255, 255, 0.55);
+      border-radius: 28px;
     }
 
     .dress-title {
       margin: 0;
 
-      font-size: 30px;
-
-      font-weight: 400;
+      font-size:
+        clamp(32px, 4vw, 46px);
     }
 
     .dress-text {
@@ -405,24 +618,27 @@
     }
 
 
-    /* =========================
+    /* =====================================================
        RSVP
-    ========================= */
+    ===================================================== */
 
     .rsvp-section {
-      background: var(--white);
+      background:
+        white;
     }
 
     .rsvp-intro {
       max-width: 600px;
 
-      margin: 0 auto 45px;
+      margin:
+        0 auto 45px;
+
+      color:
+        var(--soft-text);
 
       font-size: 17px;
 
       line-height: 1.8;
-
-      color: var(--soft-text);
     }
 
     .rsvp-form {
@@ -434,7 +650,7 @@
     }
 
     .form-group {
-      margin-bottom: 28px;
+      margin-bottom: 27px;
     }
 
     .form-label {
@@ -442,7 +658,9 @@
 
       margin-bottom: 10px;
 
-      font-family: "Noto Sans Armenian", sans-serif;
+      font-family:
+        "Noto Sans Armenian",
+        sans-serif;
 
       font-size: 15px;
 
@@ -454,27 +672,40 @@
     .form-textarea {
       width: 100%;
 
-      padding: 15px 16px;
+      padding:
+        15px 16px;
 
-      border: 1px solid #d8d0ca;
+      border:
+        1px solid #d9d1ca;
 
-      border-radius: 10px;
+      border-radius: 12px;
 
-      background: #faf8f6;
+      background:
+        #faf8f6;
 
-      color: var(--text);
+      color:
+        var(--text);
 
       font-size: 16px;
 
       outline: none;
 
-      transition: 0.2s;
+      transition:
+        0.25s ease;
     }
 
     .form-input:focus,
     .form-select:focus,
     .form-textarea:focus {
-      border-color: var(--accent);
+      border-color:
+        var(--accent);
+
+      background:
+        white;
+
+      box-shadow:
+        0 0 0 3px
+        rgba(174,146,120,0.10);
     }
 
     .form-textarea {
@@ -482,6 +713,9 @@
 
       resize: vertical;
     }
+
+
+    /* RADIO OPTIONS */
 
     .radio-group {
       display: grid;
@@ -494,94 +728,222 @@
 
       align-items: center;
 
-      gap: 10px;
+      gap: 11px;
 
-      padding: 14px 15px;
+      padding:
+        15px 16px;
 
-      border: 1px solid #ddd5ce;
+      border:
+        1px solid #ddd5ce;
 
-      border-radius: 10px;
+      border-radius: 12px;
 
-      background: #faf8f6;
+      background:
+        #faf8f6;
 
       cursor: pointer;
+
+      transition:
+        0.2s ease;
+    }
+
+    .radio-option:hover {
+      border-color:
+        var(--accent);
     }
 
     .radio-option input {
-      accent-color: var(--accent);
+      accent-color:
+        var(--accent);
+
+      width: 17px;
+
+      height: 17px;
     }
+
+
+    /* SUBMIT */
 
     .submit-button {
       width: 100%;
 
-      padding: 16px;
+      padding:
+        17px;
 
       margin-top: 10px;
 
       border: none;
 
-      border-radius: 40px;
+      border-radius: 50px;
 
-      background: var(--dark);
+      background:
+        var(--dark);
 
       color: white;
 
-      font-size: 15px;
+      font-size: 14px;
+
+      letter-spacing: 1px;
 
       cursor: pointer;
 
-      transition: 0.3s;
+      transition:
+        0.3s ease;
     }
 
     .submit-button:hover {
-      opacity: 0.85;
+      transform:
+        translateY(-2px);
+
+      box-shadow:
+        0 10px 25px
+        rgba(48,42,38,0.18);
     }
 
     .submit-button:disabled {
-      opacity: 0.6;
+      opacity: 0.55;
 
       cursor: wait;
     }
 
-    .form-message {
-      display: none;
 
-      margin-top: 20px;
+    /* =====================================================
+       THANK YOU MODAL
+    ===================================================== */
 
-      padding: 15px;
+    .thank-overlay {
+      position: fixed;
 
-      border-radius: 10px;
+      inset: 0;
 
-      text-align: center;
+      z-index: 9999;
 
-      font-family: "Noto Sans Armenian", sans-serif;
+      display: flex;
+
+      align-items: center;
+
+      justify-content: center;
+
+      padding: 20px;
+
+      background:
+        rgba(37,31,27,0.62);
+
+      backdrop-filter:
+        blur(8px);
+
+      opacity: 0;
+
+      visibility: hidden;
+
+      transition:
+        opacity 0.35s ease,
+        visibility 0.35s ease;
     }
 
-    .form-message.success {
-      display: block;
+    .thank-overlay.show {
+      opacity: 1;
 
-      background: #eef5ed;
-
-      color: #42643d;
+      visibility: visible;
     }
 
-    .form-message.error {
-      display: block;
+    .thank-card {
+      width:
+        min(460px, 100%);
 
-      background: #f8eeee;
+      padding:
+        55px 30px;
 
-      color: #874b4b;
+      background:
+        #fffdfb;
+
+      border-radius: 28px;
+
+      box-shadow:
+        0 30px 80px
+        rgba(0,0,0,0.25);
+
+      transform:
+        translateY(20px)
+        scale(0.98);
+
+      transition:
+        0.35s ease;
+    }
+
+    .thank-overlay.show
+    .thank-card {
+      transform:
+        translateY(0)
+        scale(1);
+    }
+
+    .thank-heart {
+      color:
+        var(--accent);
+
+      font-size: 42px;
+
+      margin-bottom: 15px;
+    }
+
+    .thank-title {
+      margin:
+        0 0 15px;
+
+      font-family:
+        "ArmCaps",
+        "Noto Serif Armenian",
+        serif;
+
+      font-size: 38px;
+
+      font-weight: normal;
+    }
+
+    .thank-text {
+      margin: 0;
+
+      color:
+        var(--soft-text);
+
+      font-size: 16px;
+
+      line-height: 1.8;
+    }
+
+    .thank-close {
+      margin-top: 28px;
+
+      padding:
+        12px 26px;
+
+      border:
+        1px solid
+        var(--accent);
+
+      border-radius: 40px;
+
+      background:
+        transparent;
+
+      color:
+        var(--text);
+
+      cursor: pointer;
     }
 
 
-    /* =========================
+    /* =====================================================
        FINAL
-    ========================= */
+    ===================================================== */
 
     .final-section {
-      padding: 100px 20px;
+      padding:
+        110px 20px;
 
-      background: var(--dark);
+      background:
+        var(--dark);
 
       color: white;
     }
@@ -589,9 +951,10 @@
     .final-heart {
       margin-bottom: 20px;
 
-      color: #d5b99f;
+      color:
+        #d8baa0;
 
-      font-size: 28px;
+      font-size: 30px;
     }
 
     .final-message {
@@ -607,92 +970,286 @@
     .final-names {
       display: block;
 
-      margin-top: 30px;
+      margin-top: 32px;
 
-      font-size: 34px;
+      font-size:
+        clamp(38px, 5vw, 58px);
     }
 
 
-    /* =========================
-       MOBILE
-    ========================= */
+    /* =====================================================
+       SCROLL ANIMATION
+    ===================================================== */
 
-    @media (max-width: 700px) {
+    .reveal {
+      opacity: 0;
+
+      transform:
+        translateY(30px);
+
+      transition:
+        opacity 0.8s ease,
+        transform 0.8s ease;
+    }
+
+    .reveal.visible {
+      opacity: 1;
+
+      transform:
+        translateY(0);
+    }
+
+    .delay-1 {
+      transition-delay:
+        0.10s;
+    }
+
+    .delay-2 {
+      transition-delay:
+        0.20s;
+    }
+
+
+    /* =====================================================
+       MOBILE
+    ===================================================== */
+
+    @media
+    (max-width: 700px) {
+
+      .container {
+        width: 94%;
+      }
+
+
+      /* SAVE DATE */
 
       .save-date {
         min-height: auto;
 
-        padding: 50px 0 65px;
+        padding:
+          42px 0 58px;
       }
 
       .save-title {
-        margin-bottom: 35px;
+        font-size:
+          clamp(52px, 18vw, 78px);
+
+        margin-bottom:
+          28px;
       }
 
+
+      /*
+       Important:
+       On mobile we KEEP
+       all 3 photos in one row
+       like your reference.
+      */
+
       .date-gallery {
-        gap: 7px;
+        width: 100%;
+
+        grid-template-columns:
+          repeat(3, 1fr);
+
+        gap: 6px;
+
+        margin-bottom:
+          35px;
       }
 
       .date-photo {
-        aspect-ratio: 3 / 4;
+        aspect-ratio:
+          0.72;
       }
 
       .date-number {
-        bottom: 8px;
+        bottom: 6px;
 
-        font-size: 58px;
+        font-size:
+          clamp(42px, 15vw, 65px);
       }
 
-      .main-names {
-        margin-top: 10px;
 
-        font-size: 40px;
+      .main-names {
+        font-size:
+          clamp(38px, 13vw, 56px);
       }
 
       .getting-married {
-        letter-spacing: 3px;
+        margin-top: 15px;
 
-        font-size: 11px;
+        font-size: 10px;
+
+        letter-spacing: 3px;
       }
 
+      .main-button {
+        margin-top: 27px;
+
+        font-size: 13px;
+      }
+
+
+      /* GENERAL */
+
       .section {
-        padding: 75px 20px;
+        padding:
+          75px 18px;
+      }
+
+      .section-title {
+        font-size:
+          clamp(30px, 10vw, 42px);
       }
 
       .invitation-text {
         font-size: 16px;
+
+        line-height: 1.9;
       }
 
       .big-date {
         font-size: 23px;
+
+        letter-spacing: 3px;
       }
 
-      .countdown-wrapper {
-        gap: 15px;
+
+      /* COUNTDOWN */
+
+      .countdown {
+        grid-template-columns:
+          repeat(4, 1fr);
+
+        gap: 7px;
+
+        margin-top: 35px;
       }
 
       .countdown-item {
-        min-width: 60px;
+        padding:
+          20px 3px;
+
+        border-radius: 13px;
       }
 
       .countdown-number {
-        font-size: 32px;
+        font-size:
+          clamp(25px, 8vw, 34px);
       }
 
+      .countdown-label {
+        font-size: 9px;
+      }
+
+
+      /* PROGRAM */
+
       .program-grid {
-        grid-template-columns: 1fr;
+        grid-template-columns:
+          1fr;
+
+        gap: 18px;
       }
 
       .program-card {
-        padding: 38px 20px;
+        padding:
+          38px 20px;
       }
 
+      .event-title {
+        font-size: 27px;
+      }
+
+      .event-time {
+        font-size: 31px;
+      }
+
+      .event-place {
+        min-height: auto;
+
+        font-size: 16px;
+      }
+
+
+      /* DRESS */
+
       .dress-card {
-        padding: 45px 20px;
+        padding:
+          45px 18px;
+      }
+
+      .dress-title {
+        font-size:
+          clamp(29px, 9vw, 38px);
+      }
+
+      .dress-text {
+        font-size: 16px;
+      }
+
+
+      /* RSVP */
+
+      .rsvp-intro {
+        font-size: 15px;
       }
 
       .rsvp-form {
-        max-width: 100%;
+        width: 100%;
+      }
+
+      .form-input,
+      .form-select,
+      .form-textarea {
+        font-size: 16px;
+      }
+
+      .submit-button {
+        font-size: 12px;
+
+        padding:
+          16px 10px;
+      }
+
+
+      /* FINAL */
+
+      .final-section {
+        padding:
+          85px 20px;
+      }
+
+      .final-message {
+        font-size: 16px;
+      }
+
+    }
+
+
+    /* reduced motion accessibility */
+
+    @media
+    (prefers-reduced-motion: reduce) {
+
+      *,
+      *::before,
+      *::after {
+        scroll-behavior: auto !important;
+
+        animation-duration:
+          0.01ms !important;
+
+        transition-duration:
+          0.01ms !important;
+      }
+
+      .reveal {
+        opacity: 1;
+
+        transform: none;
       }
 
     }
@@ -705,20 +1262,24 @@
 <body>
 
 
-  <!-- SAVE THE DATE -->
+  <!-- =====================================================
+       SAVE THE DATE
+  ===================================================== -->
 
   <section class="save-date">
 
     <div class="container">
 
-      <h1 class="save-title">
+      <h1 class="save-title reveal">
         Save The Date
       </h1>
 
 
-      <div class="date-gallery">
+      <div class="date-gallery reveal delay-1">
 
-        <div class="date-photo photo-one">
+
+        <div
+          class="date-photo photo-one">
 
           <span class="date-number">
             03
@@ -727,7 +1288,8 @@
         </div>
 
 
-        <div class="date-photo photo-two">
+        <div
+          class="date-photo photo-two">
 
           <span class="date-number">
             10
@@ -736,7 +1298,8 @@
         </div>
 
 
-        <div class="date-photo photo-three">
+        <div
+          class="date-photo photo-three">
 
           <span class="date-number">
             26
@@ -744,22 +1307,23 @@
 
         </div>
 
+
       </div>
 
 
-      <h2 class="main-names">
-        Ալիկ & Արևիկ
+      <h2 class="main-names reveal">
+        Ալիկ &amp; Արևիկ
       </h2>
 
 
-      <div class="getting-married">
+      <div class="getting-married reveal">
         ԱՄՈՒՍՆԱՆՈՒՄ ԵՆՔ
       </div>
 
 
       <a
         href="#invitation"
-        class="scroll-button">
+        class="main-button reveal">
 
         Բացել հրավիրատոմսը
 
@@ -771,18 +1335,19 @@
 
 
 
-  <!-- INVITATION -->
+  <!-- =====================================================
+       INVITATION
+  ===================================================== -->
 
   <section
     id="invitation"
     class="section white-section">
 
-    <div class="container">
+    <div class="container reveal">
 
       <h2 class="section-title">
         Սիրով հրավիրում ենք Ձեզ
       </h2>
-
 
       <div class="gold-line"></div>
 
@@ -815,21 +1380,27 @@
 
 
 
-  <!-- COUNTDOWN -->
+  <!-- =====================================================
+       COUNTDOWN
+  ===================================================== -->
 
-  <section class="section">
+  <section
+    class="section countdown-section">
 
     <div class="container">
 
-      <h2 class="section-title">
-        Մինչ մեր հարսանիքը
-      </h2>
+      <div class="reveal">
+
+        <h2 class="section-title">
+          Մինչ մեր հարսանիքը
+        </h2>
+
+        <div class="gold-line"></div>
+
+      </div>
 
 
-      <div class="gold-line"></div>
-
-
-      <div class="countdown-wrapper">
+      <div class="countdown reveal delay-1">
 
 
         <div class="countdown-item">
@@ -837,7 +1408,9 @@
           <span
             id="days"
             class="countdown-number">
+
             00
+
           </span>
 
           <span class="countdown-label">
@@ -852,7 +1425,9 @@
           <span
             id="hours"
             class="countdown-number">
+
             00
+
           </span>
 
           <span class="countdown-label">
@@ -867,7 +1442,9 @@
           <span
             id="minutes"
             class="countdown-number">
+
             00
+
           </span>
 
           <span class="countdown-label">
@@ -882,7 +1459,9 @@
           <span
             id="seconds"
             class="countdown-number">
+
             00
+
           </span>
 
           <span class="countdown-label">
@@ -900,18 +1479,23 @@
 
 
 
-  <!-- PROGRAM -->
+  <!-- =====================================================
+       PROGRAM
+  ===================================================== -->
 
   <section class="section white-section">
 
     <div class="container">
 
-      <h2 class="section-title">
-        Հարսանեկան ծրագիր
-      </h2>
+      <div class="reveal">
 
+        <h2 class="section-title">
+          Հարսանեկան ծրագիր
+        </h2>
 
-      <div class="gold-line"></div>
+        <div class="gold-line"></div>
+
+      </div>
 
 
       <div class="program-grid">
@@ -919,32 +1503,41 @@
 
         <!-- NORAVANK -->
 
-        <div class="program-card">
+        <div class="program-card reveal">
 
           <div class="event-icon">
             ⛪
           </div>
 
+
           <h3 class="event-title">
             Պսակադրության արարողություն
           </h3>
+
 
           <div class="event-time">
             14:00
           </div>
 
+
           <div class="event-place">
+
             Նորավանք
+
+            <br>
+
+            Areni, Vayots Dzor
+
           </div>
 
 
           <a
             class="map-button"
-            href="https://www.google.com/maps/search/?api=1&query=Noravank+Monastery+Armenia"
+            href="https://www.google.com/maps/search/?api=1&query=M6MM%2BW8%2C%20Noravank%20Monastery%20Rd%2C%20Areni%203604%2C%20Armenia"
             target="_blank"
             rel="noopener noreferrer">
 
-            Ինչպես հասնել
+            📍 Ինչպես հասնել
 
           </a>
 
@@ -952,34 +1545,44 @@
 
 
 
-        <!-- LIDER COMPLEX -->
+        <!-- LIDER -->
 
-        <div class="program-card">
+        <div class="program-card reveal delay-1">
 
           <div class="event-icon">
             🥂
           </div>
 
+
           <h3 class="event-title">
             Հարսանեկան խնջույք
           </h3>
+
 
           <div class="event-time">
             17:30
           </div>
 
+
           <div class="event-place">
-            Lider Complex Restaurant & Cafe
+
+            Lider Complex
+            Restaurant &amp; Cafe
+
+            <br>
+
+            Vayk
+
           </div>
 
 
           <a
             class="map-button"
-            href="https://www.google.com/maps/search/?api=1&query=Lider+Complex+Restaurant+Cafe+Armenia"
+            href="https://www.google.com/maps/search/?api=1&query=Lider%20Complex%20Restaurant%20%26%20Cafe&query_place_id=ChIJSeoN-JadFUARJUntInBK-rs"
             target="_blank"
             rel="noopener noreferrer">
 
-            Ինչպես հասնել
+            📍 Ինչպես հասնել
 
           </a>
 
@@ -994,13 +1597,15 @@
 
 
 
-  <!-- DRESS CODE -->
+  <!-- =====================================================
+       DRESS CODE
+  ===================================================== -->
 
-  <section class="section">
+  <section class="section dress-section">
 
     <div class="container">
 
-      <div class="dress-card">
+      <div class="dress-card reveal">
 
         <h2 class="dress-title">
           Դրես-կոդ՝ Էլեգանտ ✨
@@ -1013,7 +1618,10 @@
         <p class="dress-text">
 
           <em>
-            Սպիտակը թողնենք հարսնացուին։
+
+            Սպիտակը թողնենք
+            հարսնացուին։
+
           </em>
 
         </p>
@@ -1026,29 +1634,36 @@
 
 
 
-  <!-- RSVP -->
+  <!-- =====================================================
+       RSVP
+  ===================================================== -->
 
-  <section class="section rsvp-section">
+  <section
+    class="section rsvp-section">
 
     <div class="container">
 
-      <h2 class="section-title">
-        RSVP
-      </h2>
+      <div class="reveal">
+
+        <h2 class="section-title">
+          RSVP
+        </h2>
 
 
-      <div class="gold-line"></div>
+        <div class="gold-line"></div>
 
 
-      <div class="rsvp-intro">
+        <div class="rsvp-intro">
 
-        Խնդրում ենք հաստատել Ձեր մասնակցությունը
-        հարսանիքին։
+          Խնդրում ենք հաստատել
+          Ձեր մասնակցությունը հարսանիքին։
 
-        <br><br>
+          <br><br>
 
-        Ձեր պատասխանը շատ կօգնի մեզ
-        կազմակերպչական հարցերում։
+          Ձեր պատասխանը շատ կօգնի
+          մեզ կազմակերպչական հարցերում։
+
+        </div>
 
       </div>
 
@@ -1056,7 +1671,7 @@
 
       <form
         id="rsvpForm"
-        class="rsvp-form">
+        class="rsvp-form reveal">
 
 
         <!-- ATTENDANCE -->
@@ -1064,11 +1679,14 @@
         <div class="form-group">
 
           <label class="form-label">
+
             Կկարողանա՞ք մասնակցել
+
           </label>
 
 
           <div class="radio-group">
+
 
             <label class="radio-option">
 
@@ -1095,6 +1713,7 @@
 
             </label>
 
+
           </div>
 
         </div>
@@ -1106,11 +1725,14 @@
         <div class="form-group">
 
           <label class="form-label">
+
             Ու՞մ կողմից եք
+
           </label>
 
 
           <div class="radio-group">
+
 
             <label class="radio-option">
 
@@ -1136,6 +1758,7 @@
               Արևիկի
 
             </label>
+
 
           </div>
 
@@ -1168,7 +1791,7 @@
 
 
 
-        <!-- GUEST COUNT -->
+        <!-- GUESTS -->
 
         <div class="form-group">
 
@@ -1187,33 +1810,41 @@
             name="guests"
             required>
 
+
             <option value="">
               Ընտրել
             </option>
+
 
             <option value="1">
               1
             </option>
 
+
             <option value="2">
               2
             </option>
+
 
             <option value="3">
               3
             </option>
 
+
             <option value="4">
               4
             </option>
+
 
             <option value="5">
               5
             </option>
 
+
             <option value="6">
               6
             </option>
+
 
           </select>
 
@@ -1238,7 +1869,8 @@
             id="message"
             class="form-textarea"
             name="message"
-            placeholder="Ցանկության դեպքում կարող եք գրել հաղորդագրություն մեզ համար"></textarea>
+            placeholder="Ցանկության դեպքում կարող եք գրել հաղորդագրություն մեզ համար">
+          </textarea>
 
         </div>
 
@@ -1254,12 +1886,6 @@
         </button>
 
 
-        <div
-          id="formMessage"
-          class="form-message">
-        </div>
-
-
       </form>
 
     </div>
@@ -1268,11 +1894,13 @@
 
 
 
-  <!-- FINAL -->
+  <!-- =====================================================
+       FINAL
+  ===================================================== -->
 
   <section class="final-section">
 
-    <div class="container">
+    <div class="container reveal">
 
       <div class="final-heart">
         ♡
@@ -1282,10 +1910,14 @@
       <div class="final-message">
 
         Անհամբեր սպասում ենք
-        այս կարևոր օրը Ձեզ հետ կիսելուն։
+        այս կարևոր օրը
+        Ձեզ հետ կիսելուն։
+
 
         <span class="final-names">
+
           Ալիկ և Արևիկ
+
         </span>
 
       </div>
@@ -1296,17 +1928,78 @@
 
 
 
+  <!-- =====================================================
+       THANK YOU POPUP
+  ===================================================== -->
+
+  <div
+    id="thankOverlay"
+    class="thank-overlay">
+
+    <div class="thank-card">
+
+
+      <div class="thank-heart">
+        ♡
+      </div>
+
+
+      <h2 class="thank-title">
+
+        Շնորհակալություն
+
+      </h2>
+
+
+      <p class="thank-text">
+
+        Ձեր պատասխանը ստացվել է ❤️
+
+        <br><br>
+
+        Անհամբեր սպասում ենք
+        մեր հատուկ օրը Ձեզ հետ
+        կիսելուն։
+
+      </p>
+
+
+      <button
+        id="thankClose"
+        class="thank-close"
+        type="button">
+
+        Փակել
+
+      </button>
+
+
+    </div>
+
+  </div>
+
+
+
+  <!-- =====================================================
+       JAVASCRIPT
+  ===================================================== -->
+
   <script>
 
-    /* =========================
+
+    /* =====================================================
        COUNTDOWN
-    ========================= */
+    ===================================================== */
 
     const weddingDate =
-      new Date("2026-10-03T14:00:00+04:00").getTime();
+      new Date(
+        "2026-10-03T14:00:00+04:00"
+      ).getTime();
+
 
 
     function updateCountdown() {
+
 
       const now =
         new Date().getTime();
@@ -1316,18 +2009,34 @@
         weddingDate - now;
 
 
+
       if (distance <= 0) {
 
-        document.getElementById("days").textContent = "0";
 
-        document.getElementById("hours").textContent = "0";
+        document
+          .getElementById("days")
+          .textContent = "0";
 
-        document.getElementById("minutes").textContent = "0";
 
-        document.getElementById("seconds").textContent = "0";
+        document
+          .getElementById("hours")
+          .textContent = "0";
+
+
+        document
+          .getElementById("minutes")
+          .textContent = "0";
+
+
+        document
+          .getElementById("seconds")
+          .textContent = "0";
+
 
         return;
+
       }
+
 
 
       const days =
@@ -1342,7 +2051,8 @@
           (
             distance %
             (1000 * 60 * 60 * 24)
-          ) /
+          )
+          /
           (1000 * 60 * 60)
         );
 
@@ -1352,7 +2062,8 @@
           (
             distance %
             (1000 * 60 * 60)
-          ) /
+          )
+          /
           (1000 * 60)
         );
 
@@ -1362,27 +2073,34 @@
           (
             distance %
             (1000 * 60)
-          ) /
+          )
+          /
           1000
         );
 
 
-      document.getElementById("days").textContent =
-        days;
+
+      document
+        .getElementById("days")
+        .textContent = days;
 
 
-      document.getElementById("hours").textContent =
-        hours;
+      document
+        .getElementById("hours")
+        .textContent = hours;
 
 
-      document.getElementById("minutes").textContent =
-        minutes;
+      document
+        .getElementById("minutes")
+        .textContent = minutes;
 
 
-      document.getElementById("seconds").textContent =
-        seconds;
+      document
+        .getElementById("seconds")
+        .textContent = seconds;
 
     }
+
 
 
     updateCountdown();
@@ -1395,122 +2113,288 @@
 
 
 
-    /* =========================
+    /* =====================================================
+       SCROLL ANIMATION
+    ===================================================== */
+
+    const revealElements =
+      document.querySelectorAll(
+        ".reveal"
+      );
+
+
+    const revealObserver =
+      new IntersectionObserver(
+
+        function(entries) {
+
+
+          entries.forEach(
+            function(entry) {
+
+
+              if (
+                entry.isIntersecting
+              ) {
+
+
+                entry.target
+                  .classList
+                  .add("visible");
+
+
+                revealObserver
+                  .unobserve(
+                    entry.target
+                  );
+
+              }
+
+
+            }
+          );
+
+
+        },
+
+        {
+          threshold: 0.14
+        }
+
+      );
+
+
+
+    revealElements
+      .forEach(
+        function(element) {
+
+          revealObserver
+            .observe(element);
+
+        }
+      );
+
+
+
+    /* =====================================================
        RSVP GOOGLE SHEETS
-    ========================= */
+    ===================================================== */
 
     const GOOGLE_SCRIPT_URL =
       "https://script.google.com/macros/s/AKfycbw1UlPaxadgTray3dqsSaSK-kiR0nGloFBwBZxPHK1b6Xjs_zX_4bT6LI_1R6SrpXoghg/exec";
 
 
     const rsvpForm =
-      document.getElementById("rsvpForm");
+      document.getElementById(
+        "rsvpForm"
+      );
 
 
     const submitButton =
-      document.getElementById("submitButton");
+      document.getElementById(
+        "submitButton"
+      );
 
 
-    const formMessage =
-      document.getElementById("formMessage");
+    const thankOverlay =
+      document.getElementById(
+        "thankOverlay"
+      );
 
 
-
-    rsvpForm.addEventListener(
-      "submit",
-      async function(event) {
-
-        event.preventDefault();
-
-
-        submitButton.disabled = true;
-
-
-        submitButton.textContent =
-          "ՈՒՂԱՐԿՎՈՒՄ Է...";
-
-
-        formMessage.className =
-          "form-message";
-
-
-        formMessage.textContent =
-          "";
-
-
-        const formData =
-          new FormData(rsvpForm);
+    const thankClose =
+      document.getElementById(
+        "thankClose"
+      );
 
 
 
-        const data = {
+    rsvpForm
+      .addEventListener(
+        "submit",
 
-          attendance:
-            formData.get("attendance"),
+        async function(event) {
 
-          side:
-            formData.get("side"),
 
-          name:
-            formData.get("name"),
+          event.preventDefault();
 
-          guests:
-            formData.get("guests"),
 
-          message:
-            formData.get("message")
+          submitButton.disabled =
+            true;
 
-        };
+
+          submitButton.textContent =
+            "ՈՒՂԱՐԿՎՈՒՄ Է...";
 
 
 
-        try {
-
-          await fetch(
-            GOOGLE_SCRIPT_URL,
-            {
-              method: "POST",
-
-              mode: "no-cors",
-
-              body:
-                JSON.stringify(data)
-            }
-          );
+          const formData =
+            new FormData(
+              rsvpForm
+            );
 
 
-          formMessage.className =
-            "form-message success";
+
+          const data = {
 
 
-          formMessage.textContent =
-            "Շնորհակալություն ❤️ Ձեր պատասխանը պահպանված է։";
+            attendance:
+              formData.get(
+                "attendance"
+              ),
 
 
-          rsvpForm.reset();
+            side:
+              formData.get(
+                "side"
+              ),
 
 
-        } catch (error) {
+            name:
+              formData.get(
+                "name"
+              ),
 
 
-          formMessage.className =
-            "form-message error";
+            guests:
+              formData.get(
+                "guests"
+              ),
 
 
-          formMessage.textContent =
-            "Չհաջողվեց ուղարկել պատասխանը։ Խնդրում ենք կրկին փորձել։";
+            message:
+              formData.get(
+                "message"
+              )
+
+          };
+
+
+
+          try {
+
+
+            await fetch(
+
+              GOOGLE_SCRIPT_URL,
+
+              {
+
+                method: "POST",
+
+                mode: "no-cors",
+
+                body:
+                  JSON.stringify(
+                    data
+                  )
+
+              }
+
+            );
+
+
+
+            /* clear form */
+
+            rsvpForm.reset();
+
+
+
+            /* show thank you popup */
+
+            thankOverlay
+              .classList
+              .add("show");
+
+
+
+            /* automatic close
+               after 7 seconds */
+
+            setTimeout(
+              function() {
+
+                thankOverlay
+                  .classList
+                  .remove("show");
+
+              },
+              7000
+            );
+
+
+          }
+
+          catch(error) {
+
+
+            alert(
+              "Չհաջողվեց ուղարկել պատասխանը։ Խնդրում ենք կրկին փորձել։"
+            );
+
+
+          }
+
+
+
+          submitButton.disabled =
+            false;
+
+
+          submitButton.textContent =
+            "ՀԱՍՏԱՏԵԼ ՄԱՍՆԱԿՑՈՒԹՅՈՒՆԸ";
+
 
         }
+      );
 
 
-        submitButton.disabled = false;
+
+    /* close thank-you popup */
+
+    thankClose
+      .addEventListener(
+        "click",
+
+        function() {
+
+          thankOverlay
+            .classList
+            .remove("show");
+
+        }
+      );
 
 
-        submitButton.textContent =
-          "ՀԱՍՏԱՏԵԼ ՄԱՍՆԱԿՑՈՒԹՅՈՒՆԸ";
 
-      }
-    );
+    /* click outside closes popup */
+
+    thankOverlay
+      .addEventListener(
+        "click",
+
+        function(event) {
+
+
+          if (
+            event.target ===
+            thankOverlay
+          ) {
+
+
+            thankOverlay
+              .classList
+              .remove("show");
+
+
+          }
+
+
+        }
+      );
+
 
   </script>
 
