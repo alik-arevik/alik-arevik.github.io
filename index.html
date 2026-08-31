@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html lang="hy">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Ալիկ և Արևիկ | Հարսանիք</title>
+
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      margin: 0;
+      font-family: Georgia, "Times New Roman", serif;
+      background: #faf8f4;
+      color: #333;
+      text-align: center;
+    }
+
+    /* MAIN SCREEN */
+    .hero {
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      padding: 30px 20px;
+    }
+
+    .small-title {
+      letter-spacing: 3px;
+      font-size: 14px;
+      margin-bottom: 25px;
+      text-transform: uppercase;
+    }
+
+    h1 {
+      font-size: clamp(48px, 9vw, 85px);
+      font-weight: normal;
+      line-height: 1.05;
+      margin: 10px 0;
+    }
+
+    .ampersand {
+      font-size: 45px;
+      font-style: italic;
+      margin: 5px 0;
+    }
+
+    .date {
+      font-size: 22px;
+      margin-top: 25px;
+      letter-spacing: 2px;
+    }
+
+    .time {
+      margin-top: 10px;
+      font-size: 18px;
+    }
+
+    .button {
+      display: inline-block;
+      margin-top: 35px;
+      padding: 15px 32px;
+      background: #333;
+      color: white;
+      text-decoration: none;
+      border-radius: 30px;
+      transition: 0.3s;
+    }
+
+    .button:hover {
+      transform: translateY(-2px);
+      opacity: 0.85;
+    }
+
+    /* INVITATION DETAILS */
+    .details {
+      min-height: 100vh;
+      padding: 100px 20px;
+      background: white;
+    }
+
+    .details h2 {
+      font-size: 38px;
+      font-weight: normal;
+      margin-bottom: 30px;
+    }
+
+    .invitation-text {
+      max-width: 600px;
+      margin: 0 auto 50px;
+      font-size: 19px;
+      line-height: 1.9;
+    }
+
+    .info {
+      margin: 40px auto;
+      max-width: 500px;
+    }
+
+    .info h3 {
+      font-size: 25px;
+      font-weight: normal;
+      margin-bottom: 10px;
+    }
+
+    .info p {
+      font-size: 18px;
+      line-height: 1.7;
+    }
+
+    .heart {
+      font-size: 25px;
+      margin: 40px 0;
+    }
+
+    /* MOBILE */
+    @media (max-width: 600px) {
+
+      .small-title {
+        font-size: 12px;
+        letter-spacing: 2px;
+      }
+
+      .date {
+        font-size: 18px;
+      }
+
+      .details {
+        padding: 70px 20px;
+      }
+
+      .details h2 {
+        font-size: 32px;
+      }
+    }
+  </style>
+</head>
+
+
+<body>
+
+  <!-- MAIN SCREEN -->
+
+  <section class="hero">
+
+    <div class="small-title">
+      ՄԵՆՔ ԱՄՈՒՍՆԱՆՈՒՄ ԵՆՔ
+    </div>
+
+
+    <h1>Ալիկ</h1>
+
+    <div class="ampersand">
+      &
+    </div>
+
+    <h1>Արևիկ</h1>
+
+
+    <div class="date">
+      03 · 10 · 2026
+    </div>
+
+
+    <div class="time">
+      Ժամը 10:00
+    </div>
+
+
+    <a href="#details" class="button">
+      Բացել հրավիրատոմսը
+    </a>
+
+  </section>
+
+
+
+  <!-- INVITATION DETAILS -->
+
+  <section id="details" class="details">
+
+    <h2>
+      Սիրով հրավիրում ենք Ձեզ
+    </h2>
+
+
+    <div class="invitation-text">
+
+      Մեզ համար շատ կարևոր է այս գեղեցիկ օրը
+      կիսել մեր հարազատների և ընկերների հետ։
+
+      <br><br>
+
+      Սիրով հրավիրում ենք Ձեզ ներկա գտնվելու
+      մեր հարսանեկան արարողությանը և միասին
+      տոնելու մեր նոր կյանքի սկիզբը։
+
+    </div>
+
+
+    <div class="heart">
+      ♡
+    </div>
+
+
+    <div class="info">
+
+      <h3>
+        Ամսաթիվ
+      </h3>
+
+      <p>
+        03 հոկտեմբերի, 2026
+      </p>
+
+    </div>
+
+
+    <div class="info">
+
+      <h3>
+        Ժամ
+      </h3>
+
+      <p>
+        10:00
+      </p>
+
+    </div>
+
+
+    <div class="info">
+
+      <h3>
+        Վայր
+      </h3>
+
+      <p>
+        Lider Complex
+      </p>
+
+    </div>
+
+
+    <div class="heart">
+      ♡
+    </div>
+
+
+    <p>
+
+      Սիրով՝
+
+      <br><br>
+
+      <strong>
+        Ալիկ և Արևիկ
+      </strong>
+
+    </p>
+
+  </section>
+
+</body>
+
+</html>
