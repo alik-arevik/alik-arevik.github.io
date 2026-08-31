@@ -46,11 +46,15 @@
       --bg: #f7f3ee;
       --bg-soft: #efe8e0;
       --white: #ffffff;
+
       --text: #3b2f28;
       --muted: #7c6e64;
+
       --accent: #b39274;
       --accent-dark: #8a6240;
+
       --border: rgba(179, 146, 116, 0.22);
+
       --dark: #2f2924;
     }
 
@@ -69,7 +73,9 @@
 
     body {
       margin: 0;
+
       background: var(--bg);
+
       color: var(--text);
 
       font-family:
@@ -95,6 +101,10 @@
         sans-serif;
     }
 
+    a {
+      -webkit-tap-highlight-color: transparent;
+    }
+
     .container {
       width: min(1140px, 92%);
       margin: 0 auto;
@@ -112,7 +122,7 @@
 
       font-weight: 400;
 
-      line-height: 1.35;
+      line-height: 1.4;
 
       color: var(--text);
     }
@@ -149,7 +159,7 @@
     }
 
 
-    /* HERO PHOTO */
+    /* HERO IMAGE */
 
     .hero-image {
       position: absolute;
@@ -161,12 +171,15 @@
 
       object-fit: cover;
 
-      /* նկարը մի փոքր ձախ */
+      /*
+        Նկարը մի փոքր ձախ է տեղափոխված
+      */
+
       object-position: 41% 28%;
     }
 
 
-    /* HERO DARK GRADIENT */
+    /* HERO GRADIENT */
 
     .hero::after {
       content: "";
@@ -180,15 +193,15 @@
       background:
         linear-gradient(
           to left,
-          rgba(20,15,12,0.68) 0%,
-          rgba(20,15,12,0.43) 28%,
-          rgba(20,15,12,0.12) 60%,
+          rgba(20,15,12,0.69) 0%,
+          rgba(20,15,12,0.44) 28%,
+          rgba(20,15,12,0.13) 60%,
           rgba(20,15,12,0.03) 100%
         );
     }
 
 
-    /* HERO TEXT */
+    /* HERO CONTENT */
 
     .hero-content {
       position: relative;
@@ -201,14 +214,16 @@
 
       padding: 40px 10px;
 
-      text-align: center;
-
       color: white;
+
+      text-align: center;
     }
 
 
     .hero-topline {
-      margin: 0 0 12px;
+      margin: 0 0 14px;
+
+      padding: 5px;
 
       font-family:
         "SHKDzeragir",
@@ -218,17 +233,18 @@
       font-size:
         clamp(30px, 3.5vw, 54px);
 
+      font-weight: normal;
+
       line-height: 1.4;
 
       color: white;
 
       text-shadow:
-        0 4px 20px
-        rgba(0,0,0,0.35);
+        0 4px 20px rgba(0,0,0,0.40);
     }
 
 
-    /* NAMES */
+    /* HERO NAMES */
 
     .hero-names {
       margin: 0;
@@ -250,10 +266,8 @@
       color: white;
 
       text-shadow:
-        0 8px 28px
-        rgba(0,0,0,0.43);
+        0 8px 28px rgba(0,0,0,0.44);
     }
-
 
     .hero-names .and-word {
       display: block;
@@ -284,8 +298,7 @@
       color: white;
 
       text-shadow:
-        0 4px 18px
-        rgba(0,0,0,0.35);
+        0 4px 18px rgba(0,0,0,0.40);
     }
 
 
@@ -374,13 +387,12 @@
 
 
     /* =====================================================
-       INVITATION SECTION
+       INVITATION
     ===================================================== */
 
     .invitation-section {
       background: white;
     }
-
 
     .invitation-layout {
       width: min(1450px, 94%);
@@ -399,8 +411,8 @@
     }
 
 
-    /* SECOND PHOTO
-       FULL IMAGE
+    /* PHOTO 2
+       FULL PHOTO
        NO FRAME
        NO CROP
     */
@@ -415,7 +427,6 @@
       justify-content: center;
     }
 
-
     .invitation-photo img {
       width: 100%;
 
@@ -425,7 +436,7 @@
 
       object-position: center;
 
-      border: none;
+      border: 0;
 
       border-radius: 0;
 
@@ -441,7 +452,6 @@
       text-align: center;
     }
 
-
     .invitation-text {
       max-width: 590px;
 
@@ -455,7 +465,6 @@
 
       color: var(--text);
     }
-
 
     .invitation-date {
       margin-top: 45px;
@@ -485,7 +494,6 @@
         );
     }
 
-
     .countdown-grid {
       max-width: 760px;
 
@@ -498,7 +506,6 @@
 
       gap: 14px;
     }
-
 
     .countdown-item {
       padding: 28px 10px;
@@ -516,7 +523,6 @@
         rgba(0,0,0,0.03);
     }
 
-
     .countdown-number {
       display: block;
 
@@ -530,7 +536,6 @@
 
       color: var(--accent-dark);
     }
-
 
     .countdown-label {
       display: block;
@@ -555,7 +560,6 @@
       background: white;
     }
 
-
     .program-grid {
       max-width: 960px;
 
@@ -570,7 +574,6 @@
 
       align-items: stretch;
     }
-
 
     .program-card {
       min-height: 530px;
@@ -595,7 +598,6 @@
         rgba(0,0,0,0.035);
     }
 
-
     .event-icon {
       height: 48px;
 
@@ -611,7 +613,7 @@
     }
 
 
-    /* SAME TITLE HEIGHT */
+    /* SAME TITLE LEVEL */
 
     .event-title {
       min-height: 88px;
@@ -634,7 +636,7 @@
     }
 
 
-    /* SAME TIME HEIGHT */
+    /* SAME TIME LEVEL */
 
     .event-time {
       min-height: 54px;
@@ -653,7 +655,7 @@
     }
 
 
-    /* SAME PLACE HEIGHT */
+    /* SAME PLACE LEVEL */
 
     .event-place {
       min-height: 98px;
@@ -705,7 +707,6 @@
       transition: 0.28s ease;
     }
 
-
     .map-button:hover {
       background: var(--accent);
 
@@ -720,7 +721,6 @@
     .dress-section {
       background: var(--bg);
     }
-
 
     .dress-card {
       max-width: 700px;
@@ -738,7 +738,6 @@
         rgba(255,255,255,0.55);
     }
 
-
     .dress-title {
       margin: 0;
 
@@ -747,7 +746,6 @@
 
       font-weight: 400;
     }
-
 
     .dress-text {
       margin: 0;
@@ -767,18 +765,69 @@
     }
 
 
-    .rsvp-intro {
-      max-width: 640px;
+    /*
+      RSVP PHOTO + TITLE
+    */
 
-      margin: 0 auto 44px;
+    .rsvp-header {
+      max-width: 1080px;
 
-      font-size: 17px;
+      margin: 0 auto 65px;
 
-      line-height: 1.9;
+      display: grid;
 
-      color: var(--muted);
+      grid-template-columns:
+        minmax(280px, 420px)
+        minmax(0, 1fr);
+
+      align-items: center;
+
+      gap: 70px;
     }
 
+
+    /* PHOTO 4 */
+
+    .rsvp-photo {
+      width: 100%;
+    }
+
+    .rsvp-photo img {
+      display: block;
+
+      width: 100%;
+      height: auto;
+
+      object-fit: contain;
+
+      border-radius: 24px;
+
+      box-shadow:
+        0 20px 50px
+        rgba(48,41,36,0.12);
+    }
+
+
+    /* RSVP TITLE + TEXT */
+
+    .rsvp-heading {
+      text-align: center;
+    }
+
+    .rsvp-intro {
+      max-width: 590px;
+
+      margin: 0 auto;
+
+      color: var(--muted);
+
+      font-size: 18px;
+
+      line-height: 1.9;
+    }
+
+
+    /* RSVP FORM */
 
     .rsvp-form {
       max-width: 680px;
@@ -788,11 +837,9 @@
       text-align: left;
     }
 
-
     .form-group {
       margin-bottom: 24px;
     }
-
 
     .form-label {
       display: block;
@@ -808,6 +855,8 @@
       font-weight: 500;
     }
 
+
+    /* INPUTS */
 
     .form-input,
     .form-select,
@@ -834,7 +883,6 @@
         box-shadow 0.2s ease;
     }
 
-
     .form-input:focus,
     .form-select:focus,
     .form-textarea:focus {
@@ -845,7 +893,6 @@
         rgba(179,146,116,0.10);
     }
 
-
     .form-textarea {
       min-height: 120px;
 
@@ -853,12 +900,13 @@
     }
 
 
+    /* RADIO OPTIONS */
+
     .radio-group {
       display: grid;
 
       gap: 10px;
     }
-
 
     .radio-option {
       display: flex;
@@ -881,16 +929,25 @@
       font-family:
         "Noto Sans Armenian",
         sans-serif;
+
+      transition: 0.2s ease;
     }
 
+    .radio-option:hover {
+      border-color: var(--accent);
+    }
 
     .radio-option input {
       width: 17px;
       height: 17px;
 
+      flex: 0 0 auto;
+
       accent-color: var(--accent);
     }
 
+
+    /* SUBMIT */
 
     .submit-button {
       width: 100%;
@@ -914,11 +971,13 @@
       transition: 0.25s ease;
     }
 
-
     .submit-button:hover {
-      transform: translateY(-1px);
-    }
+      transform: translateY(-2px);
 
+      box-shadow:
+        0 10px 25px
+        rgba(48,41,36,0.14);
+    }
 
     .submit-button:disabled {
       opacity: 0.6;
@@ -960,13 +1019,11 @@
       transition: 0.35s ease;
     }
 
-
     .thank-overlay.show {
       opacity: 1;
 
       visibility: visible;
     }
-
 
     .thank-card {
       width:
@@ -983,7 +1040,6 @@
         rgba(0,0,0,0.26);
     }
 
-
     .thank-heart {
       margin-bottom: 15px;
 
@@ -992,7 +1048,6 @@
       color: var(--accent);
     }
 
-
     .thank-title {
       margin: 0 0 14px;
 
@@ -1000,7 +1055,6 @@
 
       font-weight: 400;
     }
-
 
     .thank-text {
       margin: 0;
@@ -1011,7 +1065,6 @@
 
       color: var(--muted);
     }
-
 
     .thank-close {
       margin-top: 28px;
@@ -1043,7 +1096,6 @@
       color: white;
     }
 
-
     .final-heart {
       margin-bottom: 16px;
 
@@ -1051,7 +1103,6 @@
 
       color: #d7bba1;
     }
-
 
     .final-message {
       max-width: 620px;
@@ -1062,7 +1113,6 @@
 
       line-height: 1.9;
     }
-
 
     .final-names {
       display: block;
@@ -1098,7 +1148,6 @@
         transform 0.85s ease;
     }
 
-
     .reveal.visible {
       opacity: 1;
 
@@ -1106,11 +1155,9 @@
         translateY(0);
     }
 
-
     .delay-1 {
       transition-delay: 0.12s;
     }
-
 
     .delay-2 {
       transition-delay: 0.22s;
@@ -1131,13 +1178,13 @@
       }
 
 
+      /* INVITATION */
+
       .invitation-layout {
-        grid-template-columns:
-          1fr;
+        grid-template-columns: 1fr;
 
         gap: 40px;
       }
-
 
       .invitation-photo {
         width:
@@ -1147,10 +1194,14 @@
       }
 
 
-      .invitation-photo img {
-        width: 100%;
+      /* RSVP */
 
-        height: auto;
+      .rsvp-header {
+        grid-template-columns:
+          minmax(250px, 360px)
+          1fr;
+
+        gap: 45px;
       }
 
     }
@@ -1163,42 +1214,35 @@
     @media (max-width: 700px) {
 
       .section {
-        padding:
-          72px 16px;
+        padding: 72px 16px;
       }
 
 
-      /* HERO MOBILE */
+      /* =============================================
+         HERO MOBILE
+      ============================================= */
 
       .hero {
         justify-content: center;
       }
 
-
       .hero-image {
-        /*
-          mobile-ում նկարը մի փոքր ձախ
-        */
-
-        object-position:
-          38% 30%;
+        object-position: 38% 30%;
       }
-
 
       .hero::after {
         background:
           linear-gradient(
             to top,
-            rgba(20,15,12,0.62) 0%,
-            rgba(20,15,12,0.36) 38%,
+            rgba(20,15,12,0.66) 0%,
+            rgba(20,15,12,0.40) 38%,
             rgba(20,15,12,0.08) 100%
           );
       }
 
 
       /*
-        ՏԵՔՍՏԸ MOBILE-ՈՒՄ ԻՋԵՑՎԱԾ Է,
-        ՈՐ ԴԵՄՔԵՐԸ ՉԾԱԾԿԻ
+        TEXT DOWN TO AVOID FACES
       */
 
       .hero-content {
@@ -1206,34 +1250,28 @@
 
         max-width: 100%;
 
-        margin:
-          0 auto;
+        margin: 0 auto;
 
-        padding:
-          30px 10px;
+        padding: 30px 10px;
 
         transform:
           translateY(12vh);
       }
-
 
       .hero-topline {
         font-size:
           clamp(24px, 8vw, 38px);
       }
 
-
       .hero-names {
         font-size:
           clamp(62px, 19vw, 96px);
       }
 
-
       .hero-names .and-word {
         font-size:
           clamp(28px, 8vw, 44px);
       }
-
 
       .hero-date {
         margin-top: 22px;
@@ -1244,28 +1282,26 @@
         letter-spacing: 4px;
       }
 
-
       .hero-button {
-        padding:
-          13px 22px;
+        padding: 13px 22px;
 
         font-size: 13px;
       }
 
 
-      /* INVITATION MOBILE */
+      /* =============================================
+         INVITATION MOBILE
+      ============================================= */
 
       .invitation-layout {
         width: 100%;
 
-        gap: 35px;
+        gap: 36px;
       }
-
 
       .invitation-photo {
         width: 100%;
       }
-
 
       .invitation-photo img {
         width: 100%;
@@ -1275,24 +1311,16 @@
         object-fit: contain;
 
         object-position: center;
-
-        border: none;
-
-        border-radius: 0;
       }
-
 
       .invitation-content {
-        padding:
-          10px 6px;
+        padding: 10px 5px;
       }
-
 
       .section-title {
         font-size:
           clamp(28px, 9vw, 38px);
       }
-
 
       .invitation-text {
         font-size: 16px;
@@ -1300,15 +1328,18 @@
         line-height: 1.9;
       }
 
-
       .invitation-date {
+        margin-top: 35px;
+
         font-size: 27px;
 
         letter-spacing: 4px;
       }
 
 
-      /* COUNTDOWN MOBILE */
+      /* =============================================
+         COUNTDOWN MOBILE
+      ============================================= */
 
       .countdown-grid {
         grid-template-columns:
@@ -1319,33 +1350,28 @@
         margin-top: 35px;
       }
 
-
       .countdown-item {
-        padding:
-          20px 8px;
+        padding: 20px 8px;
       }
-
 
       .countdown-number {
         font-size: 34px;
       }
 
 
-      /* PROGRAM MOBILE */
+      /* =============================================
+         PROGRAM MOBILE
+      ============================================= */
 
       .program-grid {
-        grid-template-columns:
-          1fr;
+        grid-template-columns: 1fr;
       }
-
 
       .program-card {
         min-height: auto;
 
-        padding:
-          38px 20px;
+        padding: 38px 20px;
       }
-
 
       .event-title,
       .event-time,
@@ -1353,16 +1379,13 @@
         min-height: auto;
       }
 
-
       .event-title {
         font-size: 22px;
       }
 
-
       .event-time {
         font-size: 32px;
       }
-
 
       .event-place {
         margin-bottom: 24px;
@@ -1371,13 +1394,13 @@
       }
 
 
-      /* DRESS MOBILE */
+      /* =============================================
+         DRESS MOBILE
+      ============================================= */
 
       .dress-card {
-        padding:
-          42px 18px;
+        padding: 42px 18px;
       }
-
 
       .dress-title {
         font-size:
@@ -1385,19 +1408,75 @@
       }
 
 
-      /* FINAL MOBILE */
+      /* =============================================
+         RSVP MOBILE
+      ============================================= */
+
+      .rsvp-header {
+        grid-template-columns: 1fr;
+
+        gap: 35px;
+
+        margin-bottom: 48px;
+      }
+
+      .rsvp-photo {
+        width: 100%;
+
+        max-width: 430px;
+
+        margin: 0 auto;
+      }
+
+      .rsvp-photo img {
+        width: 100%;
+
+        height: auto;
+
+        object-fit: contain;
+
+        border-radius: 18px;
+      }
+
+      .rsvp-heading {
+        padding: 0 5px;
+      }
+
+      .rsvp-intro {
+        font-size: 16px;
+
+        line-height: 1.85;
+      }
+
+      .rsvp-form {
+        width: 100%;
+      }
+
+      .form-input,
+      .form-select,
+      .form-textarea {
+        font-size: 16px;
+      }
+
+      .submit-button {
+        font-size: 12px;
+
+        padding: 16px 8px;
+      }
+
+
+      /* =============================================
+         FINAL MOBILE
+      ============================================= */
 
       .dress-text,
       .final-message {
         font-size: 16px;
       }
 
-
       .final-section {
-        padding:
-          80px 18px;
+        padding: 80px 18px;
       }
-
 
       .final-names {
         font-size:
@@ -1420,7 +1499,6 @@
 
         transition: none !important;
       }
-
 
       .reveal {
         opacity: 1;
@@ -1521,13 +1599,13 @@
     <div class="invitation-layout">
 
 
-      <!-- PHOTO 2 - FULL IMAGE -->
+      <!-- PHOTO 2 -->
 
       <div class="invitation-photo reveal">
 
 
         <img
-          src="photo2.jpg.jpg"
+          src="photo2.jpg"
           alt="Ալիկ և Արևիկ"
         >
 
@@ -1640,6 +1718,7 @@
         </div>
 
 
+
         <div class="countdown-item">
 
 
@@ -1663,6 +1742,7 @@
         </div>
 
 
+
         <div class="countdown-item">
 
 
@@ -1684,6 +1764,7 @@
 
 
         </div>
+
 
 
         <div class="countdown-item">
@@ -1745,6 +1826,7 @@
       </div>
 
 
+
       <div class="program-grid">
 
 
@@ -1787,8 +1869,11 @@
 
           <a
             class="map-button"
+
             href="https://www.google.com/maps/search/?api=1&query=M6MM%2BW8%2C%20Noravank%20Monastery%20Rd%2C%20Areni%203604%2C%20Armenia"
+
             target="_blank"
+
             rel="noopener noreferrer"
           >
 
@@ -1840,8 +1925,11 @@
 
           <a
             class="map-button"
+
             href="https://www.google.com/maps/search/?api=1&query=Lider%20Complex%20Restaurant%20%26%20Cafe%20Vayk%20Armenia"
+
             target="_blank"
+
             rel="noopener noreferrer"
           >
 
@@ -1919,28 +2007,55 @@
     <div class="container">
 
 
-      <div class="reveal">
+      <!-- PHOTO 4 + RSVP TEXT -->
+
+      <div class="rsvp-header">
 
 
-        <h2 class="section-title">
+        <!-- SELFIE -->
 
-          RSVP
-
-        </h2>
+        <div class="rsvp-photo reveal">
 
 
-        <div class="gold-line"></div>
+          <img
+            src="photo4.jpg"
+            alt="Ալիկ և Արևիկ"
+          >
 
 
-        <div class="rsvp-intro">
+        </div>
 
-          Խնդրում ենք հաստատել
-          Ձեր մասնակցությունը հարսանիքին։
 
-          <br><br>
 
-          Ձեր պատասխանը շատ կօգնի մեզ
-          կազմակերպչական հարցերում։
+        <!-- RSVP TITLE -->
+
+        <div class="rsvp-heading reveal delay-1">
+
+
+          <h2 class="section-title">
+
+            RSVP
+
+          </h2>
+
+
+          <div class="gold-line"></div>
+
+
+          <div class="rsvp-intro">
+
+
+            Խնդրում ենք հաստատել
+            Ձեր մասնակցությունը հարսանիքին։
+
+            <br><br>
+
+            Ձեր պատասխանը շատ կօգնի մեզ
+            կազմակերպչական հարցերում։
+
+
+          </div>
+
 
         </div>
 
@@ -1948,6 +2063,8 @@
       </div>
 
 
+
+      <!-- RSVP FORM -->
 
       <form
         id="rsvpForm"
@@ -1985,6 +2102,7 @@
 
 
             </label>
+
 
 
             <label class="radio-option">
@@ -2041,6 +2159,7 @@
 
 
             </label>
+
 
 
             <label class="radio-option">
@@ -2172,6 +2291,8 @@
         </div>
 
 
+
+        <!-- SUBMIT -->
 
         <button
           id="submitButton"
@@ -2485,10 +2606,9 @@
         function(element) {
 
 
-          observer
-            .observe(
-              element
-            );
+          observer.observe(
+            element
+          );
 
 
         }
@@ -2498,7 +2618,7 @@
 
 
     /* =====================================================
-       RSVP
+       RSVP GOOGLE SHEETS
     ===================================================== */
 
     const GOOGLE_SCRIPT_URL =
@@ -2601,20 +2721,16 @@
 
               {
 
-
                 method:
                   "POST",
 
-
                 mode:
                   "no-cors",
-
 
                 body:
                   JSON.stringify(
                     data
                   )
-
 
               }
 
