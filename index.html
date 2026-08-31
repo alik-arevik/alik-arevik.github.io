@@ -3,23 +3,32 @@
 
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <title>Ալիկ և Արևիկ | Save The Date</title>
+  <meta name="viewport"
+        content="width=device-width, initial-scale=1.0">
 
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <title>Ալիկ և Արևիկ | 03.10.2026</title>
 
-  <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Noto+Sans+Armenian:wght@300;400;500;600&family=Noto+Serif+Armenian:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <link rel="preconnect"
+        href="https://fonts.googleapis.com">
+
+  <link rel="preconnect"
+        href="https://fonts.gstatic.com"
+        crossorigin>
+
+  <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Noto+Sans+Armenian:wght@300;400;500;600&family=Noto+Serif+Armenian:wght@300;400;500;600&display=swap"
+        rel="stylesheet">
 
   <style>
+
     :root {
-      --bg: #f1efed;
+      --background: #f4f1ed;
       --white: #ffffff;
-      --text: #2f2a27;
-      --soft-text: #6f6761;
-      --accent: #b3977b;
-      --line: #ddd5ce;
+      --text: #342f2b;
+      --soft-text: #796f68;
+      --accent: #aa8c70;
+      --light-accent: #ded1c5;
+      --dark: #302a26;
     }
 
     * {
@@ -32,104 +41,163 @@
 
     body {
       margin: 0;
-      background: var(--bg);
+      background: var(--background);
       color: var(--text);
       font-family: "Noto Serif Armenian", serif;
       text-align: center;
     }
 
+    button,
+    input,
+    select,
+    textarea {
+      font-family: "Noto Sans Armenian", sans-serif;
+    }
+
     .container {
-      width: min(1100px, 92%);
+      width: min(1080px, 92%);
       margin: 0 auto;
     }
 
-    /* TOP SAVE THE DATE SECTION */
-    .save-date-section {
+
+    /* ==========================
+       SAVE THE DATE
+    ========================== */
+
+    .save-date {
+      min-height: 100vh;
       padding: 70px 0 60px;
+
+      display: flex;
+      align-items: center;
     }
 
-    .save-date-title {
+    .save-title {
       font-family: "Great Vibes", cursive;
-      font-size: clamp(52px, 8vw, 110px);
+      font-size: clamp(58px, 9vw, 115px);
       font-weight: normal;
-      margin: 0 0 45px;
-      color: #3a3531;
+      line-height: 1;
+      margin: 0 0 50px;
     }
 
-    .gallery {
+    .date-gallery {
       display: grid;
       grid-template-columns: repeat(3, 1fr);
-      gap: 22px;
-      margin-bottom: 50px;
+
+      gap: 20px;
+
+      max-width: 900px;
+
+      margin: 0 auto 55px;
     }
 
-    .photo-card {
+    .date-photo {
       position: relative;
+
       aspect-ratio: 3 / 4;
+
       overflow: hidden;
+
       background-image: url("hero.png.PNG");
       background-size: cover;
-      background-position: center;
-      border-radius: 4px;
-      box-shadow: 0 12px 35px rgba(0, 0, 0, 0.08);
+
+      box-shadow: 0 15px 40px rgba(0,0,0,0.08);
     }
 
-    .photo-card::after {
+    .photo-one {
+      background-position: 25% center;
+    }
+
+    .photo-two {
+      background-position: 50% center;
+    }
+
+    .photo-three {
+      background-position: 75% center;
+    }
+
+    .date-photo::after {
       content: "";
+
       position: absolute;
       inset: 0;
-      background: linear-gradient(to top, rgba(0, 0, 0, 0.22), rgba(0, 0, 0, 0.02));
+
+      background:
+        linear-gradient(
+          to top,
+          rgba(0,0,0,0.30),
+          rgba(0,0,0,0)
+        );
     }
 
     .date-number {
       position: absolute;
+
       left: 50%;
-      bottom: 18px;
+      bottom: 12px;
+
       transform: translateX(-50%);
+
       z-index: 2;
+
       color: white;
-      font-size: clamp(62px, 7vw, 130px);
+
+      font-family: Georgia, serif;
+
+      font-size: clamp(65px, 8vw, 125px);
+
       line-height: 1;
-      font-weight: 500;
-      letter-spacing: 2px;
     }
 
-    .couple-names {
-      font-size: clamp(44px, 6vw, 82px);
-      font-weight: 400;
-      margin: 0 0 20px;
-      line-height: 1.15;
+    .main-names {
+      margin: 0;
+
+      font-size: clamp(42px, 6vw, 76px);
+
+      font-weight: 300;
     }
 
     .getting-married {
+      margin-top: 22px;
+
       font-family: "Noto Sans Armenian", sans-serif;
-      letter-spacing: 8px;
-      text-transform: uppercase;
-      font-size: 14px;
-      color: #3f3a36;
-      margin-bottom: 35px;
+
+      font-size: 13px;
+
+      letter-spacing: 7px;
     }
 
-    .open-button {
+    .scroll-button {
       display: inline-block;
+
+      margin-top: 35px;
+
       padding: 14px 30px;
-      background: transparent;
-      border: 1px solid #8d7e72;
-      border-radius: 40px;
-      color: var(--text);
+
+      border: 1px solid var(--accent);
+      border-radius: 50px;
+
       text-decoration: none;
+
+      color: var(--text);
+
       font-family: "Noto Sans Armenian", sans-serif;
+
       transition: 0.3s;
     }
 
-    .open-button:hover {
-      background: #8d7e72;
+    .scroll-button:hover {
+      background: var(--accent);
       color: white;
     }
 
-    /* INVITATION SECTION */
+
+    /* ==========================
+       COMMON SECTION
+    ========================== */
+
     .section {
-      padding: 90px 0;
+      padding: 100px 20px;
     }
 
     .white-section {
@@ -137,147 +205,475 @@
     }
 
     .section-title {
-      font-size: 36px;
+      margin: 0;
+
+      font-size: clamp(30px, 4vw, 42px);
+
       font-weight: 400;
-      margin: 0 0 20px;
     }
 
-    .line {
-      width: 60px;
+    .gold-line {
+      width: 55px;
       height: 1px;
-      margin: 0 auto 28px;
+
+      margin: 28px auto;
+
       background: var(--accent);
     }
 
+
+    /* ==========================
+       INVITATION
+    ========================== */
+
     .invitation-text {
-      width: min(720px, 92%);
-      margin: 0 auto;
+      max-width: 680px;
+
+      margin: auto;
+
       font-size: 18px;
       line-height: 2;
-      color: var(--text);
+
+      font-weight: 300;
     }
 
-    /* PROGRAM */
+    .big-date {
+      margin-top: 45px;
+
+      font-family: Georgia, serif;
+
+      font-size: 29px;
+
+      letter-spacing: 4px;
+    }
+
+
+    /* ==========================
+       COUNTDOWN
+    ========================== */
+
+    .countdown-wrapper {
+      display: flex;
+      justify-content: center;
+
+      flex-wrap: wrap;
+
+      gap: 40px;
+
+      margin-top: 45px;
+    }
+
+    .countdown-item {
+      min-width: 90px;
+    }
+
+    .countdown-number {
+      display: block;
+
+      font-family: Georgia, serif;
+
+      font-size: 45px;
+    }
+
+    .countdown-label {
+      display: block;
+
+      margin-top: 7px;
+
+      font-family: "Noto Sans Armenian", sans-serif;
+
+      font-size: 12px;
+
+      color: var(--soft-text);
+    }
+
+
+    /* ==========================
+       PROGRAM
+    ========================== */
+
     .program-grid {
       display: grid;
+
       grid-template-columns: repeat(2, 1fr);
-      gap: 24px;
-      margin-top: 40px;
+
+      gap: 25px;
+
+      max-width: 850px;
+
+      margin: 50px auto 0;
     }
 
     .program-card {
-      background: var(--white);
+      padding: 45px 25px;
+
       border-radius: 20px;
-      padding: 40px 25px;
-      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.04);
+
+      background: var(--white);
+
+      box-shadow: 0 12px 35px rgba(0,0,0,0.045);
     }
 
-    .program-icon {
-      font-size: 34px;
-      margin-bottom: 12px;
+    .event-icon {
+      font-size: 35px;
     }
 
-    .program-title {
-      font-size: 24px;
-      margin: 0 0 14px;
+    .event-title {
+      margin: 18px 0 15px;
+
+      font-size: 23px;
+
       font-weight: 400;
     }
 
-    .program-time {
-      font-size: 34px;
-      color: var(--accent);
+    .event-time {
       margin-bottom: 12px;
+
+      color: var(--accent);
+
+      font-family: Georgia, serif;
+
+      font-size: 34px;
     }
 
-    .program-place {
-      font-size: 18px;
-      line-height: 1.7;
+    .event-place {
+      min-height: 55px;
+
+      font-size: 17px;
+      line-height: 1.6;
     }
 
-    /* DRESS CODE */
+    .map-button {
+      display: inline-block;
+
+      margin-top: 25px;
+
+      padding: 12px 22px;
+
+      border: 1px solid var(--accent);
+      border-radius: 30px;
+
+      text-decoration: none;
+
+      color: var(--text);
+
+      font-family: "Noto Sans Armenian", sans-serif;
+
+      font-size: 14px;
+
+      transition: 0.3s;
+    }
+
+    .map-button:hover {
+      background: var(--accent);
+      color: white;
+    }
+
+
+    /* ==========================
+       DRESS CODE
+    ========================== */
+
     .dress-card {
-      width: min(700px, 92%);
-      margin: 0 auto;
-      background: var(--white);
-      border: 1px solid var(--line);
-      border-radius: 24px;
-      padding: 50px 25px;
+      max-width: 650px;
+
+      margin: auto;
+
+      padding: 55px 25px;
+
+      border: 1px solid var(--light-accent);
+
+      border-radius: 25px;
+
+      background: rgba(255,255,255,0.55);
     }
 
     .dress-title {
-      font-size: 32px;
+      margin: 0;
+
+      font-size: 30px;
+
       font-weight: 400;
-      margin: 0 0 18px;
     }
 
     .dress-text {
-      font-size: 19px;
-      line-height: 1.9;
       margin: 0;
+
+      font-size: 18px;
+
+      line-height: 1.8;
     }
 
-    /* FINAL */
-    .final-section {
-      background: #332d29;
+
+    /* ==========================
+       RSVP
+    ========================== */
+
+    .rsvp-section {
+      background: var(--white);
+    }
+
+    .rsvp-intro {
+      max-width: 600px;
+
+      margin: 0 auto 45px;
+
+      font-size: 17px;
+      line-height: 1.8;
+
+      color: var(--soft-text);
+    }
+
+    .rsvp-form {
+      max-width: 650px;
+
+      margin: auto;
+
+      text-align: left;
+    }
+
+    .form-group {
+      margin-bottom: 28px;
+    }
+
+    .form-label {
+      display: block;
+
+      margin-bottom: 10px;
+
+      font-family: "Noto Sans Armenian", sans-serif;
+
+      font-size: 15px;
+
+      font-weight: 500;
+    }
+
+    .form-input,
+    .form-select,
+    .form-textarea {
+      width: 100%;
+
+      padding: 15px 16px;
+
+      border: 1px solid #d8d0ca;
+
+      border-radius: 10px;
+
+      background: #faf8f6;
+
+      color: var(--text);
+
+      font-size: 16px;
+
+      outline: none;
+
+      transition: 0.2s;
+    }
+
+    .form-input:focus,
+    .form-select:focus,
+    .form-textarea:focus {
+      border-color: var(--accent);
+    }
+
+    .form-textarea {
+      min-height: 120px;
+
+      resize: vertical;
+    }
+
+    .radio-group {
+      display: grid;
+
+      gap: 10px;
+    }
+
+    .radio-option {
+      display: flex;
+
+      align-items: center;
+
+      gap: 10px;
+
+      padding: 14px 15px;
+
+      border: 1px solid #ddd5ce;
+
+      border-radius: 10px;
+
+      background: #faf8f6;
+
+      cursor: pointer;
+    }
+
+    .radio-option input {
+      accent-color: var(--accent);
+    }
+
+    .submit-button {
+      width: 100%;
+
+      padding: 16px;
+
+      margin-top: 10px;
+
+      border: none;
+
+      border-radius: 40px;
+
+      background: var(--dark);
+
       color: white;
-      padding: 90px 0;
+
+      font-size: 15px;
+
+      cursor: pointer;
+
+      transition: 0.3s;
     }
 
-    .heart {
+    .submit-button:hover {
+      opacity: 0.85;
+    }
+
+    .submit-button:disabled {
+      opacity: 0.6;
+      cursor: wait;
+    }
+
+    .form-message {
+      display: none;
+
+      margin-top: 20px;
+
+      padding: 15px;
+
+      border-radius: 10px;
+
+      text-align: center;
+
+      font-family: "Noto Sans Armenian", sans-serif;
+    }
+
+    .form-message.success {
+      display: block;
+
+      background: #eef5ed;
+
+      color: #42643d;
+    }
+
+    .form-message.error {
+      display: block;
+
+      background: #f8eeee;
+
+      color: #874b4b;
+    }
+
+
+    /* ==========================
+       FINAL
+    ========================== */
+
+    .final-section {
+      padding: 100px 20px;
+
+      background: var(--dark);
+
+      color: white;
+    }
+
+    .final-heart {
+      margin-bottom: 20px;
+
+      color: #d5b99f;
+
       font-size: 28px;
-      margin-bottom: 18px;
-      color: #d6b798;
     }
 
-    .final-text {
-      width: min(650px, 92%);
-      margin: 0 auto;
+    .final-message {
+      max-width: 600px;
+
+      margin: auto;
+
       font-size: 18px;
       line-height: 1.9;
     }
 
     .final-names {
       display: block;
-      margin-top: 28px;
+
+      margin-top: 30px;
+
       font-size: 34px;
-      font-weight: 400;
     }
 
-    /* MOBILE */
-    @media (max-width: 768px) {
-      .save-date-section {
-        padding: 50px 0 40px;
+
+    /* ==========================
+       MOBILE
+    ========================== */
+
+    @media (max-width: 700px) {
+
+      .save-date {
+        min-height: auto;
+
+        padding: 50px 0 65px;
       }
 
-      .gallery {
-        grid-template-columns: 1fr;
-        gap: 18px;
+      .save-title {
+        margin-bottom: 35px;
       }
 
-      .photo-card {
-        aspect-ratio: 4 / 5;
+      .date-gallery {
+        gap: 7px;
+      }
+
+      .date-photo {
+        aspect-ratio: 3 / 4;
       }
 
       .date-number {
-        font-size: 80px;
+        bottom: 8px;
+
+        font-size: 58px;
+      }
+
+      .main-names {
+        margin-top: 10px;
+
+        font-size: 40px;
       }
 
       .getting-married {
-        letter-spacing: 4px;
-        font-size: 12px;
-        padding: 0 10px;
+        letter-spacing: 3px;
+
+        font-size: 11px;
       }
 
       .section {
-        padding: 70px 0;
-      }
-
-      .section-title {
-        font-size: 30px;
+        padding: 75px 20px;
       }
 
       .invitation-text {
         font-size: 16px;
+      }
+
+      .big-date {
+        font-size: 23px;
+      }
+
+      .countdown-wrapper {
+        gap: 15px;
+      }
+
+      .countdown-item {
+        min-width: 60px;
+      }
+
+      .countdown-number {
+        font-size: 32px;
       }
 
       .program-grid {
@@ -285,148 +681,837 @@
       }
 
       .program-card {
-        padding: 35px 20px;
+        padding: 38px 20px;
       }
 
-      .program-title {
-        font-size: 22px;
+      .dress-card {
+        padding: 45px 20px;
       }
 
-      .program-time {
-        font-size: 28px;
+      .rsvp-form {
+        max-width: 100%;
       }
 
-      .program-place {
-        font-size: 16px;
-      }
-
-      .dress-title {
-        font-size: 28px;
-      }
-
-      .dress-text {
-        font-size: 17px;
-      }
-
-      .final-names {
-        font-size: 30px;
-      }
     }
+
   </style>
+
 </head>
+
 
 <body>
 
-  <!-- SAVE THE DATE -->
-  <section class="save-date-section">
+
+  <!-- ==========================
+       SAVE THE DATE
+  ========================== -->
+
+  <section class="save-date">
+
     <div class="container">
 
-      <h1 class="save-date-title">Save The Date</h1>
+      <h1 class="save-title">
+        Save The Date
+      </h1>
 
-      <div class="gallery">
-        <div class="photo-card">
-          <div class="date-number">03</div>
+
+      <div class="date-gallery">
+
+
+        <div class="date-photo photo-one">
+
+          <span class="date-number">
+            03
+          </span>
+
         </div>
 
-        <div class="photo-card">
-          <div class="date-number">10</div>
+
+        <div class="date-photo photo-two">
+
+          <span class="date-number">
+            10
+          </span>
+
         </div>
 
-        <div class="photo-card">
-          <div class="date-number">26</div>
+
+        <div class="date-photo photo-three">
+
+          <span class="date-number">
+            26
+          </span>
+
         </div>
+
+
       </div>
 
-      <h2 class="couple-names">Ալիկ &amp; Արևիկ</h2>
+
+      <h2 class="main-names">
+        Ալիկ & Արևիկ
+      </h2>
+
 
       <div class="getting-married">
         ԱՄՈՒՍՆԱՆՈՒՄ ԵՆՔ
       </div>
 
-      <a href="#invitation" class="open-button">
+
+      <a href="#invitation"
+         class="scroll-button">
+
         Բացել հրավիրատոմսը
+
       </a>
 
     </div>
+
   </section>
 
-  <!-- INVITATION -->
-  <section id="invitation" class="section white-section">
+
+
+  <!-- ==========================
+       INVITATION
+  ========================== -->
+
+  <section id="invitation"
+           class="section white-section">
+
     <div class="container">
 
-      <h2 class="section-title">Սիրով հրավիրում ենք Ձեզ</h2>
-      <div class="line"></div>
+      <h2 class="section-title">
+        Սիրով հրավիրում ենք Ձեզ
+      </h2>
+
+      <div class="gold-line"></div>
+
 
       <div class="invitation-text">
-        Մեզ համար շատ կարևոր է այս գեղեցիկ օրը
-        կիսել մեր հարազատների և ընկերների հետ։
+
+        Մեզ համար շատ կարևոր է
+        այս գեղեցիկ օրը կիսել
+        մեր հարազատների և ընկերների հետ։
+
         <br><br>
-        Սիրով հրավիրում ենք Ձեզ ներկա գտնվելու
-        մեր պսակադրության արարողությանը և
-        հարսանեկան խնջույքին՝ միասին տոնելու
+
+        Սիրով հրավիրում ենք Ձեզ
+        ներկա գտնվելու մեր
+        պսակադրության արարողությանը
+        և հարսանեկան խնջույքին՝
+        միասին տոնելու
         մեր նոր կյանքի սկիզբը։
+
+      </div>
+
+
+      <div class="big-date">
+        03 · 10 · 2026
       </div>
 
     </div>
+
   </section>
 
-  <!-- PROGRAM -->
+
+
+  <!-- ==========================
+       COUNTDOWN
+  ========================== -->
+
   <section class="section">
+
     <div class="container">
 
-      <h2 class="section-title">Հարսանեկան ծրագիր</h2>
-      <div class="line"></div>
+      <h2 class="section-title">
+        Մինչ մեր հարսանիքը
+      </h2>
+
+      <div class="gold-line"></div>
+
+
+      <div class="countdown-wrapper">
+
+        <div class="countdown-item">
+
+          <span id="days"
+                class="countdown-number">
+            00
+          </span>
+
+          <span class="countdown-label">
+            օր
+          </span>
+
+        </div>
+
+
+        <div class="countdown-item">
+
+          <span id="hours"
+                class="countdown-number">
+            00
+          </span>
+
+          <span class="countdown-label">
+            ժամ
+          </span>
+
+        </div>
+
+
+        <div class="countdown-item">
+
+          <span id="minutes"
+                class="countdown-number">
+            00
+          </span>
+
+          <span class="countdown-label">
+            րոպե
+          </span>
+
+        </div>
+
+
+        <div class="countdown-item">
+
+          <span id="seconds"
+                class="countdown-number">
+            00
+          </span>
+
+          <span class="countdown-label">
+            վայրկյան
+          </span>
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </section>
+
+
+
+  <!-- ==========================
+       PROGRAM
+  ========================== -->
+
+  <section class="section white-section">
+
+    <div class="container">
+
+      <h2 class="section-title">
+        Հարսանեկան ծրագիր
+      </h2>
+
+      <div class="gold-line"></div>
+
 
       <div class="program-grid">
 
-        <div class="program-card">
-          <div class="program-icon">⛪</div>
-          <h3 class="program-title">Պսակադրության արարողություն</h3>
-          <div class="program-time">14:00</div>
-          <div class="program-place">Նորավանք</div>
-        </div>
+
+        <!-- NORAVANK -->
 
         <div class="program-card">
-          <div class="program-icon">🥂</div>
-          <h3 class="program-title">Հարսանեկան խնջույք</h3>
-          <div class="program-time">17:30</div>
-          <div class="program-place">Lider Complex Restaurant &amp; Cafe</div>
+
+          <div class="event-icon">
+            ⛪
+          </div>
+
+          <h3 class="event-title">
+            Պսակադրության արարողություն
+          </h3>
+
+          <div class="event-time">
+            14:00
+          </div>
+
+          <div class="event-place">
+            Նորավանք
+          </div>
+
+
+          <a
+            class="map-button"
+            href="https://www.google.com/maps/search/?api=1&query=Noravank+Monastery+Armenia"
+            target="_blank"
+            rel="noopener noreferrer">
+
+            Ինչպես հասնել
+
+          </a>
+
         </div>
+
+
+
+        <!-- LIDER -->
+
+        <div class="program-card">
+
+          <div class="event-icon">
+            🥂
+          </div>
+
+          <h3 class="event-title">
+            Հարսանեկան խնջույք
+          </h3>
+
+          <div class="event-time">
+            17:30
+          </div>
+
+          <div class="event-place">
+            Lider Complex Restaurant & Cafe
+          </div>
+
+
+          <a
+            class="map-button"
+            href="https://www.google.com/maps/search/?api=1&query=Lider+Complex+Restaurant+Cafe+Armenia"
+            target="_blank"
+            rel="noopener noreferrer">
+
+            Ինչպես հասնել
+
+          </a>
+
+        </div>
+
 
       </div>
 
     </div>
+
   </section>
 
-  <!-- DRESS CODE -->
-  <section class="section white-section">
+
+
+  <!-- ==========================
+       DRESS CODE
+  ========================== -->
+
+  <section class="section">
+
     <div class="container">
 
       <div class="dress-card">
-        <h2 class="dress-title">Դրես-կոդ՝ Էլեգանտ ✨</h2>
-        <div class="line"></div>
+
+        <h2 class="dress-title">
+          Դրես-կոդ՝ Էլեգանտ ✨
+        </h2>
+
+        <div class="gold-line"></div>
+
         <p class="dress-text">
-          <em>Սպիտակը թողնենք հարսնացուին։</em>
+
+          <em>
+            Սպիտակը թողնենք հարսնացուին։
+          </em>
+
         </p>
+
       </div>
 
     </div>
+
   </section>
 
-  <!-- FINAL -->
-  <section class="final-section">
+
+
+  <!-- ==========================
+       RSVP
+  ========================== -->
+
+  <section class="section rsvp-section">
+
     <div class="container">
 
-      <div class="heart">♡</div>
+      <h2 class="section-title">
+        RSVP
+      </h2>
 
-      <div class="final-text">
-        Անհամբեր սպասում ենք այս կարևոր օրը
-        Ձեզ հետ կիսելուն։
-        <span class="final-names">Ալիկ և Արևիկ</span>
+      <div class="gold-line"></div>
+
+
+      <div class="rsvp-intro">
+
+        Խնդրում ենք հաստատել Ձեր
+        մասնակցությունը հարսանիքին։
+
+        <br>
+
+        Ձեր պատասխանը շատ կօգնի մեզ
+        կազմակերպչական հարցերում։
+
+      </div>
+
+
+
+      <form id="rsvpForm"
+            class="rsvp-form">
+
+
+        <!-- ATTENDANCE -->
+
+        <div class="form-group">
+
+          <label class="form-label">
+            Կկարողանա՞ք մասնակցել
+          </label>
+
+
+          <div class="radio-group">
+
+
+            <label class="radio-option">
+
+              <input
+                type="radio"
+                name="attendance"
+                value="Այո"
+                required>
+
+              Սիրով կմասնակցեմ ❤️
+
+            </label>
+
+
+            <label class="radio-option">
+
+              <input
+                type="radio"
+                name="attendance"
+                value="Ոչ"
+                required>
+
+              Ցավոք, չեմ կարող մասնակցել
+
+            </label>
+
+
+          </div>
+
+        </div>
+
+
+
+        <!-- SIDE -->
+
+        <div class="form-group">
+
+          <label class="form-label">
+            Ու՞մ կողմից եք
+          </label>
+
+
+          <div class="radio-group">
+
+            <label class="radio-option">
+
+              <input
+                type="radio"
+                name="side"
+                value="Ալիկի"
+                required>
+
+              Ալիկի
+
+            </label>
+
+
+            <label class="radio-option">
+
+              <input
+                type="radio"
+                name="side"
+                value="Արևիկի"
+                required>
+
+              Արևիկի
+
+            </label>
+
+          </div>
+
+        </div>
+
+
+
+        <!-- NAME -->
+
+        <div class="form-group">
+
+          <label
+            class="form-label"
+            for="guestName">
+
+            Անուն, Ազգանուն
+
+          </label>
+
+
+          <input
+            id="guestName"
+            class="form-input"
+            type="text"
+            name="name"
+            placeholder="Օրինակ՝ Արմեն Պետրոսյան"
+            required>
+
+        </div>
+
+
+
+        <!-- NUMBER OF GUESTS -->
+
+        <div class="form-group">
+
+          <label
+            class="form-label"
+            for="guestCount">
+
+            Հյուրերի քանակ
+
+          </label>
+
+
+          <select
+            id="guestCount"
+            class="form-select"
+            name="guests"
+            required>
+
+            <option value="">
+              Ընտրել
+            </option>
+
+            <option value="1">
+              1
+            </option>
+
+            <option value="2">
+              2
+            </option>
+
+            <option value="3">
+              3
+            </option>
+
+            <option value="4">
+              4
+            </option>
+
+            <option value="5">
+              5
+            </option>
+
+            <option value="6">
+              6
+            </option>
+
+          </select>
+
+        </div>
+
+
+
+        <!-- MESSAGE -->
+
+        <div class="form-group">
+
+          <label
+            class="form-label"
+            for="message">
+
+            Մեկնաբանություն կամ բարեմաղթանք
+          </label>
+
+
+          <textarea
+            id="message"
+            class="form-textarea"
+            name="message"
+            placeholder="Ցանկության դեպքում կարող եք գրել հաղորդագրություն մեզ համար"></textarea>
+
+        </div>
+
+
+
+        <button
+          id="submitButton"
+          class="submit-button"
+          type="submit">
+
+          ՀԱՍՏԱՏԵԼ ՄԱՍՆԱԿՑՈՒԹՅՈՒՆԸ
+
+        </button>
+
+
+        <div
+          id="formMessage"
+          class="form-message">
+        </div>
+
+
+      </form>
+
+    </div>
+
+  </section>
+
+
+
+  <!-- ==========================
+       FINAL
+  ========================== -->
+
+  <section class="final-section">
+
+    <div class="container">
+
+      <div class="final-heart">
+        ♡
+      </div>
+
+
+      <div class="final-message">
+
+        Անհամբեր սպասում ենք
+        այս կարևոր օրը Ձեզ հետ կիսելուն։
+
+        <span class="final-names">
+          Ալիկ և Արևիկ
+        </span>
+
       </div>
 
     </div>
+
   </section>
 
+
+
+  <!-- ==========================
+       JAVASCRIPT
+  ========================== -->
+
+  <script>
+
+    /* COUNTDOWN */
+
+    const weddingDate =
+      new Date("2026-10-03T14:00:00+04:00").getTime();
+
+
+    function updateCountdown() {
+
+      const now =
+        new Date().getTime();
+
+      const distance =
+        weddingDate - now;
+
+
+      if (distance <= 0) {
+
+        document.getElementById("days").textContent = "0";
+        document.getElementById("hours").textContent = "0";
+        document.getElementById("minutes").textContent = "0";
+        document.getElementById("seconds").textContent = "0";
+
+        return;
+      }
+
+
+      const days =
+        Math.floor(
+          distance /
+          (1000 * 60 * 60 * 24)
+        );
+
+
+      const hours =
+        Math.floor(
+          (
+            distance %
+            (1000 * 60 * 60 * 24)
+          ) /
+          (1000 * 60 * 60)
+        );
+
+
+      const minutes =
+        Math.floor(
+          (
+            distance %
+            (1000 * 60 * 60)
+          ) /
+          (1000 * 60)
+        );
+
+
+      const seconds =
+        Math.floor(
+          (
+            distance %
+            (1000 * 60)
+          ) /
+          1000
+        );
+
+
+      document.getElementById("days").textContent =
+        days;
+
+      document.getElementById("hours").textContent =
+        hours;
+
+      document.getElementById("minutes").textContent =
+        minutes;
+
+      document.getElementById("seconds").textContent =
+        seconds;
+
+    }
+
+
+    updateCountdown();
+
+    setInterval(
+      updateCountdown,
+      1000
+    );
+
+
+
+    /* ==========================
+       RSVP
+    ========================== */
+
+    const GOOGLE_SCRIPT_URL =
+      "PASTE_YOUR_GOOGLE_SCRIPT_URL_HERE";
+
+
+    const rsvpForm =
+      document.getElementById("rsvpForm");
+
+    const submitButton =
+      document.getElementById("submitButton");
+
+    const formMessage =
+      document.getElementById("formMessage");
+
+
+    rsvpForm.addEventListener(
+      "submit",
+      async function(event) {
+
+        event.preventDefault();
+
+
+        if (
+          GOOGLE_SCRIPT_URL ===
+          "PASTE_YOUR_GOOGLE_SCRIPT_URL_HERE"
+        ) {
+
+          formMessage.className =
+            "form-message error";
+
+          formMessage.textContent =
+            "RSVP-ը դեռ միացված չէ Google Sheets-ին։";
+
+          return;
+        }
+
+
+        submitButton.disabled = true;
+
+        submitButton.textContent =
+          "ՈՒՂԱՐԿՎՈՒՄ Է...";
+
+
+        const formData =
+          new FormData(rsvpForm);
+
+
+        const data = {
+
+          attendance:
+            formData.get("attendance"),
+
+          side:
+            formData.get("side"),
+
+          name:
+            formData.get("name"),
+
+          guests:
+            formData.get("guests"),
+
+          message:
+            formData.get("message")
+
+        };
+
+
+        try {
+
+          await fetch(
+            GOOGLE_SCRIPT_URL,
+            {
+              method: "POST",
+
+              mode: "no-cors",
+
+              headers: {
+                "Content-Type":
+                  "application/json"
+              },
+
+              body:
+                JSON.stringify(data)
+            }
+          );
+
+
+          formMessage.className =
+            "form-message success";
+
+
+          formMessage.textContent =
+            "Շնորհակալություն ❤️ Ձեր պատասխանը պահպանված է։";
+
+
+          rsvpForm.reset();
+
+
+        } catch (error) {
+
+
+          formMessage.className =
+            "form-message error";
+
+
+          formMessage.textContent =
+            "Չհաջողվեց ուղարկել պատասխանը։ Խնդրում ենք կրկին փորձել։";
+
+        }
+
+
+        submitButton.disabled = false;
+
+        submitButton.textContent =
+          "ՀԱՍՏԱՏԵԼ ՄԱՍՆԱԿՑՈՒԹՅՈՒՆԸ";
+
+      }
+    );
+
+  </script>
+
 </body>
+
 </html>
