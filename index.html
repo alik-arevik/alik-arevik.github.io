@@ -8,7 +8,6 @@
   <title>Ալիկ և Արևիկ | Հարսանիք</title>
 
   <style>
-
     * {
       box-sizing: border-box;
     }
@@ -25,11 +24,7 @@
       text-align: center;
     }
 
-
-    /* =========================
-       MAIN SCREEN
-    ========================= */
-
+    /* MAIN SCREEN */
     .hero {
       min-height: 100vh;
       display: flex;
@@ -43,50 +38,35 @@
       letter-spacing: 3px;
       font-size: 14px;
       margin-bottom: 25px;
-      text-transform: uppercase;
     }
 
     h1 {
-      font-size: clamp(48px, 9vw, 85px);
+      font-size: clamp(52px, 10vw, 88px);
       font-weight: normal;
-      line-height: 1.05;
+      line-height: 1;
       margin: 10px 0;
     }
 
     .ampersand {
-      font-size: 45px;
+      font-size: 43px;
       font-style: italic;
-      margin: 5px 0;
+      margin: 8px 0;
     }
 
     .date {
       font-size: 22px;
-      margin-top: 25px;
-      letter-spacing: 2px;
+      margin-top: 28px;
+      letter-spacing: 3px;
     }
-
-    .time {
-      margin-top: 10px;
-      font-size: 18px;
-    }
-
-
-    /* =========================
-       BUTTON
-    ========================= */
 
     .button {
       display: inline-block;
       margin-top: 35px;
       padding: 15px 32px;
-
       background: #333;
       color: white;
-
       text-decoration: none;
-
       border-radius: 30px;
-
       transition: 0.3s;
     }
 
@@ -95,13 +75,8 @@
       opacity: 0.85;
     }
 
-
-    /* =========================
-       DETAILS SECTION
-    ========================= */
-
+    /* DETAILS */
     .details {
-      min-height: 100vh;
       padding: 100px 20px;
       background: white;
     }
@@ -113,96 +88,103 @@
     }
 
     .invitation-text {
-      max-width: 600px;
-      margin: 0 auto 50px;
-
+      max-width: 650px;
+      margin: 0 auto 60px;
       font-size: 19px;
       line-height: 1.9;
     }
 
-
-    /* =========================
-       INFORMATION
-    ========================= */
-
-    .info {
-      margin: 40px auto;
-      max-width: 500px;
+    .heart {
+      font-size: 27px;
+      margin: 50px 0;
     }
 
-    .info h3 {
-      font-size: 25px;
-      font-weight: normal;
-      margin-bottom: 10px;
-    }
-
-    .info p {
-      font-size: 18px;
-      line-height: 1.7;
-    }
-
-
-    /* =========================
-       DRESS CODE
-    ========================= */
-
-    .dress-code {
-      margin-top: 70px;
-      margin-bottom: 70px;
-
-      padding: 45px 25px;
-
-      max-width: 550px;
-
+    /* PROGRAM */
+    .program {
       background: #faf8f4;
+      padding: 90px 20px;
+    }
 
+    .program h2 {
+      font-size: 38px;
+      font-weight: normal;
+      margin-bottom: 55px;
+    }
+
+    .event {
+      max-width: 600px;
+      margin: 0 auto 40px;
+      padding: 40px 25px;
+      background: white;
       border-radius: 20px;
     }
 
-    .dress-code h3 {
+    .event-icon {
+      font-size: 35px;
+      margin-bottom: 15px;
+    }
+
+    .event h3 {
+      font-size: 24px;
+      font-weight: normal;
+      margin: 10px 0;
+    }
+
+    .event-time {
       font-size: 27px;
+      margin: 18px 0;
+    }
+
+    .event-location {
+      font-size: 19px;
+      line-height: 1.6;
+    }
+
+    /* DRESS CODE */
+    .dress-section {
+      padding: 90px 20px;
+      background: white;
+    }
+
+    .dress-code {
+      max-width: 600px;
+      margin: auto;
+      padding: 50px 25px;
+      background: #faf8f4;
+      border-radius: 20px;
+    }
+
+    .dress-code h2 {
+      font-size: 30px;
+      font-weight: normal;
       margin-top: 0;
-      margin-bottom: 18px;
+      margin-bottom: 20px;
     }
 
     .dress-code p {
-      margin-bottom: 0;
-      font-size: 18px;
-    }
-
-
-    /* =========================
-       HEART
-    ========================= */
-
-    .heart {
-      font-size: 25px;
-      margin: 40px 0;
-    }
-
-
-    /* =========================
-       FINAL TEXT
-    ========================= */
-
-    .final-text {
-      margin-top: 50px;
-      margin-bottom: 30px;
-
-      font-size: 18px;
+      font-size: 19px;
       line-height: 1.7;
     }
 
+    /* FINAL */
+    .final-section {
+      padding: 100px 20px;
+      background: #faf8f4;
+    }
+
+    .final-section p {
+      font-size: 19px;
+      line-height: 1.8;
+    }
+
     .final-names {
-      font-size: 24px;
+      display: block;
+      margin-top: 25px;
+      font-size: 32px;
       font-weight: normal;
     }
 
-
-    /* =========================
-       MOBILE
-    ========================= */
-
+    /* MOBILE */
     @media (max-width: 600px) {
 
       .hero {
@@ -215,7 +197,7 @@
       }
 
       h1 {
-        font-size: 55px;
+        font-size: 58px;
       }
 
       .ampersand {
@@ -226,75 +208,69 @@
         font-size: 18px;
       }
 
-      .time {
-        font-size: 17px;
-      }
-
-      .details {
+      .details,
+      .program,
+      .dress-section,
+      .final-section {
         padding: 70px 20px;
       }
 
-      .details h2 {
-        font-size: 32px;
+      .details h2,
+      .program h2 {
+        font-size: 31px;
       }
 
       .invitation-text {
         font-size: 17px;
       }
 
-      .dress-code {
+      .event {
         padding: 35px 20px;
       }
 
-      .dress-code h3 {
-        font-size: 23px;
+      .event h3 {
+        font-size: 22px;
       }
 
+      .event-time {
+        font-size: 25px;
+      }
+
+      .event-location {
+        font-size: 17px;
+      }
+
+      .dress-code h2 {
+        font-size: 25px;
+      }
+
+      .dress-code p {
+        font-size: 17px;
+      }
     }
-
   </style>
-
 </head>
-
 
 <body>
 
-
-  <!-- =========================
-       MAIN SCREEN
-  ========================== -->
-
+  <!-- MAIN SCREEN -->
   <section class="hero">
 
     <div class="small-title">
       ՄԵՆՔ ԱՄՈՒՍՆԱՆՈՒՄ ԵՆՔ
     </div>
 
-
-    <h1>
-      Ալիկ
-    </h1>
-
+    <h1>Ալիկ</h1>
 
     <div class="ampersand">
       &
     </div>
 
-
-    <h1>
-      Արևիկ
-    </h1>
-
+    <h1>Արևիկ</h1>
 
     <div class="date">
       03 · 10 · 2026
     </div>
-
-
-    <div class="time">
-      Ժամը 10:00
-    </div>
-
 
     <a href="#details" class="button">
       Բացել հրավիրատոմսը
@@ -303,18 +279,12 @@
   </section>
 
 
-
-  <!-- =========================
-       INVITATION
-  ========================== -->
-
+  <!-- INVITATION -->
   <section id="details" class="details">
-
 
     <h2>
       Սիրով հրավիրում ենք Ձեզ
     </h2>
-
 
     <div class="invitation-text">
 
@@ -329,77 +299,79 @@
 
     </div>
 
-
-
     <div class="heart">
       ♡
     </div>
 
+    <h2>
+      03 հոկտեմբերի, 2026
+    </h2>
+
+  </section>
 
 
-    <!-- DATE -->
+  <!-- WEDDING PROGRAM -->
+  <section class="program">
 
-    <div class="info">
+    <h2>
+      Հարսանեկան ծրագիր
+    </h2>
+
+
+    <!-- CEREMONY -->
+    <div class="event">
+
+      <div class="event-icon">
+        ⛪
+      </div>
 
       <h3>
-        Ամսաթիվ
+        Պսակադրության արարողություն
       </h3>
 
-      <p>
-        03 հոկտեմբերի, 2026
-      </p>
+      <div class="event-time">
+        14:00
+      </div>
+
+      <div class="event-location">
+        Նորավանք
+      </div>
 
     </div>
 
 
+    <!-- RECEPTION -->
+    <div class="event">
 
-    <!-- TIME -->
-
-    <div class="info">
+      <div class="event-icon">
+        🥂
+      </div>
 
       <h3>
-        Ժամ
+        Հարսանեկան խնջույք
       </h3>
 
-      <p>
-        10:00
-      </p>
+      <div class="event-time">
+        17:30
+      </div>
+
+      <div class="event-location">
+        Lider Complex Restaurant & Cafe
+      </div>
 
     </div>
 
+  </section>
 
 
-    <!-- LOCATION -->
+  <!-- DRESS CODE -->
+  <section class="dress-section">
 
-    <div class="info">
+    <div class="dress-code">
 
-      <h3>
-        Վայր
-      </h3>
-
-      <p>
-        Lider Complex
-      </p>
-
-    </div>
-
-
-
-    <div class="heart">
-      ♡
-    </div>
-
-
-
-    <!-- =========================
-         DRESS CODE
-    ========================== -->
-
-    <div class="info dress-code">
-
-      <h3>
+      <h2>
         Դրես-կոդ՝ Էլեգանտ ✨
-      </h3>
+      </h2>
 
       <p>
         <em>
@@ -409,31 +381,26 @@
 
     </div>
 
+  </section>
 
+
+  <!-- FINAL -->
+  <section class="final-section">
 
     <div class="heart">
       ♡
     </div>
 
+    <p>
+      Անհամբեր սպասում ենք այս կարևոր օրը
+      Ձեզ հետ կիսելուն։
+    </p>
 
-
-    <!-- FINAL -->
-
-    <div class="final-text">
-
-      Սիրով՝
-
-      <br><br>
-
-      <span class="final-names">
-        Ալիկ և Արևիկ
-      </span>
-
-    </div>
-
+    <span class="final-names">
+      Ալիկ և Արևիկ
+    </span>
 
   </section>
-
 
 </body>
 
