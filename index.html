@@ -5,9 +5,26 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <title>Ալիկ և Արևիկ | Հարսանիք</title>
+  <title>Ալիկ և Արևիկ | 03.10.2026</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+  <link
+    href="https://fonts.googleapis.com/css2?family=Noto+Serif+Armenian:wght@300;400;500;600&family=Noto+Sans+Armenian:wght@300;400;500&display=swap"
+    rel="stylesheet"
+  >
 
   <style>
+
+    :root {
+      --cream: #f7f2ea;
+      --light: #fffdf9;
+      --brown: #493b32;
+      --gold: #b89b7a;
+      --soft-gold: #d9c8b2;
+    }
+
     * {
       box-sizing: border-box;
     }
@@ -18,273 +35,496 @@
 
     body {
       margin: 0;
-      font-family: Georgia, "Times New Roman", serif;
-      background: #faf8f4;
-      color: #333;
+      background: var(--cream);
+      color: var(--brown);
       text-align: center;
+      font-family: "Noto Serif Armenian", serif;
     }
 
-    /* MAIN SCREEN */
+
+    /* =========================
+       HERO
+    ========================= */
+
     .hero {
+      position: relative;
+
       min-height: 100vh;
+
       display: flex;
-      flex-direction: column;
-      justify-content: center;
       align-items: center;
+      justify-content: center;
+
       padding: 30px 20px;
+
+      background-image:
+        linear-gradient(
+          rgba(25, 20, 15, 0.30),
+          rgba(25, 20, 15, 0.55)
+        ),
+        url("hero.png");
+
+      background-size: cover;
+      background-position: center;
     }
 
-    .small-title {
-      letter-spacing: 3px;
-      font-size: 14px;
-      margin-bottom: 25px;
+    .hero-content {
+      color: white;
+      max-width: 700px;
+      width: 100%;
+      padding: 40px 20px;
     }
 
-    h1 {
-      font-size: clamp(52px, 10vw, 88px);
-      font-weight: normal;
-      line-height: 1;
-      margin: 10px 0;
+    .hero-small {
+      font-family: "Noto Sans Armenian", sans-serif;
+
+      font-size: 13px;
+      font-weight: 300;
+
+      letter-spacing: 4px;
+
+      margin-bottom: 30px;
+    }
+
+    .names {
+      margin: 0;
+
+      font-size: clamp(55px, 10vw, 100px);
+      font-weight: 300;
+
+      line-height: 1.05;
+
+      text-shadow: 0 3px 20px rgba(0, 0, 0, 0.25);
     }
 
     .ampersand {
-      font-size: 43px;
+      font-family: Georgia, serif;
+
+      font-size: 45px;
       font-style: italic;
-      margin: 8px 0;
+
+      margin: 5px 0;
     }
 
-    .date {
+    .hero-date {
+      margin-top: 30px;
+
+      font-family: Georgia, serif;
+
       font-size: 22px;
-      margin-top: 28px;
-      letter-spacing: 3px;
+
+      letter-spacing: 5px;
     }
 
-    .button {
+    .hero-button {
       display: inline-block;
+
       margin-top: 35px;
-      padding: 15px 32px;
-      background: #333;
+
+      padding: 14px 32px;
+
+      border: 1px solid rgba(255,255,255,0.8);
+      border-radius: 40px;
+
       color: white;
+
       text-decoration: none;
-      border-radius: 30px;
+
+      font-family: "Noto Sans Armenian", sans-serif;
+
+      font-size: 14px;
+
+      backdrop-filter: blur(5px);
+
+      background: rgba(255,255,255,0.08);
+
       transition: 0.3s;
     }
 
-    .button:hover {
-      transform: translateY(-2px);
-      opacity: 0.85;
-    }
-
-    /* DETAILS */
-    .details {
-      padding: 100px 20px;
+    .hero-button:hover {
       background: white;
+      color: var(--brown);
     }
 
-    .details h2 {
-      font-size: 38px;
-      font-weight: normal;
+
+    /* =========================
+       COMMON
+    ========================= */
+
+    .section {
+      padding: 100px 20px;
+    }
+
+    .section-title {
+      font-size: 36px;
+      font-weight: 400;
+
+      margin-top: 0;
       margin-bottom: 30px;
+    }
+
+    .gold-line {
+      width: 50px;
+      height: 1px;
+
+      background: var(--gold);
+
+      margin: 30px auto;
+    }
+
+    .heart {
+      font-size: 28px;
+
+      color: var(--gold);
+
+      margin: 30px 0;
+    }
+
+
+    /* =========================
+       INVITATION
+    ========================= */
+
+    .invitation {
+      background: var(--light);
     }
 
     .invitation-text {
       max-width: 650px;
-      margin: 0 auto 60px;
-      font-size: 19px;
-      line-height: 1.9;
+
+      margin: auto;
+
+      font-size: 18px;
+      line-height: 2;
+
+      font-weight: 300;
     }
 
-    .heart {
-      font-size: 27px;
-      margin: 50px 0;
+    .wedding-date-large {
+      margin-top: 45px;
+
+      font-family: Georgia, serif;
+
+      font-size: 28px;
+
+      letter-spacing: 3px;
     }
 
-    /* PROGRAM */
-    .program {
-      background: #faf8f4;
-      padding: 90px 20px;
+
+    /* =========================
+       COUNTDOWN
+    ========================= */
+
+    .countdown-section {
+      background: var(--cream);
     }
 
-    .program h2 {
-      font-size: 38px;
+    .countdown {
+      display: flex;
+
+      justify-content: center;
+
+      gap: 40px;
+
+      flex-wrap: wrap;
+
+      margin-top: 40px;
+    }
+
+    .countdown-item {
+      min-width: 80px;
+    }
+
+    .countdown-number {
+      display: block;
+
+      font-family: Georgia, serif;
+
+      font-size: 42px;
+
       font-weight: normal;
-      margin-bottom: 55px;
+    }
+
+    .countdown-label {
+      display: block;
+
+      margin-top: 6px;
+
+      font-family: "Noto Sans Armenian", sans-serif;
+
+      font-size: 12px;
+
+      color: #85766a;
+    }
+
+
+    /* =========================
+       PROGRAM
+    ========================= */
+
+    .program {
+      background: var(--light);
+    }
+
+    .events {
+      max-width: 650px;
+
+      margin: 50px auto 0;
     }
 
     .event {
-      max-width: 600px;
-      margin: 0 auto 40px;
-      padding: 40px 25px;
-      background: white;
-      border-radius: 20px;
+      position: relative;
+
+      padding: 45px 25px;
+
+      margin-bottom: 25px;
+
+      background: var(--cream);
+
+      border-radius: 22px;
     }
 
     .event-icon {
-      font-size: 35px;
+      font-size: 32px;
+
       margin-bottom: 15px;
     }
 
-    .event h3 {
-      font-size: 24px;
-      font-weight: normal;
-      margin: 10px 0;
+    .event-title {
+      margin: 0 0 15px;
+
+      font-size: 23px;
+
+      font-weight: 400;
     }
 
     .event-time {
-      font-size: 27px;
-      margin: 18px 0;
+      font-family: Georgia, serif;
+
+      font-size: 32px;
+
+      color: var(--gold);
+
+      margin-bottom: 13px;
     }
 
     .event-location {
-      font-size: 19px;
+      font-size: 18px;
+
       line-height: 1.6;
     }
 
-    /* DRESS CODE */
+
+    /* =========================
+       DRESS CODE
+    ========================= */
+
     .dress-section {
-      padding: 90px 20px;
-      background: white;
+      background: var(--cream);
     }
 
-    .dress-code {
+    .dress-card {
       max-width: 600px;
+
       margin: auto;
-      padding: 50px 25px;
-      background: #faf8f4;
-      border-radius: 20px;
+
+      padding: 55px 30px;
+
+      border: 1px solid var(--soft-gold);
+
+      border-radius: 25px;
+
+      background: rgba(255,255,255,0.35);
     }
 
-    .dress-code h2 {
-      font-size: 30px;
-      font-weight: normal;
+    .dress-card h2 {
       margin-top: 0;
-      margin-bottom: 20px;
+
+      font-size: 30px;
+
+      font-weight: 400;
     }
 
-    .dress-code p {
-      font-size: 19px;
-      line-height: 1.7;
+    .dress-card p {
+      margin-bottom: 0;
+
+      font-size: 18px;
+
+      line-height: 1.8;
     }
 
-    /* FINAL */
+
+    /* =========================
+       FINAL
+    ========================= */
+
     .final-section {
       padding: 100px 20px;
-      background: #faf8f4;
+
+      background: var(--brown);
+
+      color: white;
     }
 
     .final-section p {
-      font-size: 19px;
-      line-height: 1.8;
+      max-width: 550px;
+
+      margin: auto;
+
+      font-size: 18px;
+
+      line-height: 1.9;
+
+      font-weight: 300;
     }
 
     .final-names {
       display: block;
-      margin-top: 25px;
-      font-size: 32px;
-      font-weight: normal;
+
+      margin-top: 35px;
+
+      font-size: 35px;
+
+      font-weight: 300;
     }
 
-    /* MOBILE */
+
+    /* =========================
+       MOBILE
+    ========================= */
+
     @media (max-width: 600px) {
 
       .hero {
-        padding: 25px 20px;
+        min-height: 100svh;
+
+        background-position: 50% center;
       }
 
-      .small-title {
-        font-size: 12px;
+      .hero-content {
+        padding-top: 150px;
+      }
+
+      .hero-small {
+        font-size: 11px;
         letter-spacing: 2px;
       }
 
-      h1 {
-        font-size: 58px;
+      .names {
+        font-size: 55px;
       }
 
       .ampersand {
-        font-size: 38px;
+        font-size: 35px;
       }
 
-      .date {
-        font-size: 18px;
+      .hero-date {
+        font-size: 17px;
+        letter-spacing: 3px;
       }
 
-      .details,
-      .program,
-      .dress-section,
-      .final-section {
-        padding: 70px 20px;
+      .section {
+        padding: 75px 20px;
       }
 
-      .details h2,
-      .program h2 {
-        font-size: 31px;
+      .section-title {
+        font-size: 30px;
       }
 
       .invitation-text {
-        font-size: 17px;
+        font-size: 16px;
+      }
+
+      .countdown {
+        gap: 20px;
+      }
+
+      .countdown-item {
+        min-width: 60px;
+      }
+
+      .countdown-number {
+        font-size: 32px;
       }
 
       .event {
-        padding: 35px 20px;
+        padding: 38px 20px;
       }
 
-      .event h3 {
-        font-size: 22px;
+      .event-title {
+        font-size: 20px;
       }
 
       .event-time {
-        font-size: 25px;
+        font-size: 28px;
       }
 
       .event-location {
-        font-size: 17px;
+        font-size: 16px;
       }
 
-      .dress-code h2 {
-        font-size: 25px;
+      .dress-card {
+        padding: 45px 20px;
       }
 
-      .dress-code p {
-        font-size: 17px;
-      }
     }
+
   </style>
+
 </head>
+
 
 <body>
 
-  <!-- MAIN SCREEN -->
+
+  <!-- HERO -->
+
   <section class="hero">
 
-    <div class="small-title">
-      ՄԵՆՔ ԱՄՈՒՍՆԱՆՈՒՄ ԵՆՔ
+    <div class="hero-content">
+
+      <div class="hero-small">
+        ՄԵՆՔ ԱՄՈՒՍՆԱՆՈՒՄ ԵՆՔ
+      </div>
+
+      <h1 class="names">
+        Ալիկ
+      </h1>
+
+      <div class="ampersand">
+        &
+      </div>
+
+      <h1 class="names">
+        Արևիկ
+      </h1>
+
+      <div class="hero-date">
+        03 · 10 · 2026
+      </div>
+
+      <a href="#invitation" class="hero-button">
+        Բացել հրավիրատոմսը
+      </a>
+
     </div>
-
-    <h1>Ալիկ</h1>
-
-    <div class="ampersand">
-      &
-    </div>
-
-    <h1>Արևիկ</h1>
-
-    <div class="date">
-      03 · 10 · 2026
-    </div>
-
-    <a href="#details" class="button">
-      Բացել հրավիրատոմսը
-    </a>
 
   </section>
 
 
-  <!-- INVITATION -->
-  <section id="details" class="details">
 
-    <h2>
+  <!-- INVITATION -->
+
+  <section
+    id="invitation"
+    class="section invitation"
+  >
+
+    <h2 class="section-title">
       Սիրով հրավիրում ենք Ձեզ
     </h2>
+
+    <div class="gold-line"></div>
 
     <div class="invitation-text">
 
@@ -303,75 +543,167 @@
       ♡
     </div>
 
-    <h2>
-      03 հոկտեմբերի, 2026
-    </h2>
+    <div class="wedding-date-large">
+      03 · 10 · 2026
+    </div>
 
   </section>
 
 
-  <!-- WEDDING PROGRAM -->
-  <section class="program">
 
-    <h2>
+  <!-- COUNTDOWN -->
+
+  <section class="section countdown-section">
+
+    <h2 class="section-title">
+      Մինչ մեր հարսանիքը
+    </h2>
+
+    <div class="gold-line"></div>
+
+    <div class="countdown">
+
+      <div class="countdown-item">
+        <span
+          id="days"
+          class="countdown-number"
+        >
+          00
+        </span>
+
+        <span class="countdown-label">
+          օր
+        </span>
+      </div>
+
+
+      <div class="countdown-item">
+
+        <span
+          id="hours"
+          class="countdown-number"
+        >
+          00
+        </span>
+
+        <span class="countdown-label">
+          ժամ
+        </span>
+
+      </div>
+
+
+      <div class="countdown-item">
+
+        <span
+          id="minutes"
+          class="countdown-number"
+        >
+          00
+        </span>
+
+        <span class="countdown-label">
+          րոպե
+        </span>
+
+      </div>
+
+
+      <div class="countdown-item">
+
+        <span
+          id="seconds"
+          class="countdown-number"
+        >
+          00
+        </span>
+
+        <span class="countdown-label">
+          վայրկյան
+        </span>
+
+      </div>
+
+    </div>
+
+  </section>
+
+
+
+  <!-- PROGRAM -->
+
+  <section class="section program">
+
+    <h2 class="section-title">
       Հարսանեկան ծրագիր
     </h2>
 
+    <div class="gold-line"></div>
 
-    <!-- CEREMONY -->
-    <div class="event">
 
-      <div class="event-icon">
-        ⛪
+    <div class="events">
+
+
+      <div class="event">
+
+        <div class="event-icon">
+          ⛪
+        </div>
+
+        <h3 class="event-title">
+          Պսակադրության արարողություն
+        </h3>
+
+        <div class="event-time">
+          14:00
+        </div>
+
+        <div class="event-location">
+          Նորավանք
+        </div>
+
       </div>
 
-      <h3>
-        Պսակադրության արարողություն
-      </h3>
 
-      <div class="event-time">
-        14:00
+
+      <div class="event">
+
+        <div class="event-icon">
+          🥂
+        </div>
+
+        <h3 class="event-title">
+          Հարսանեկան խնջույք
+        </h3>
+
+        <div class="event-time">
+          17:30
+        </div>
+
+        <div class="event-location">
+          Lider Complex Restaurant & Cafe
+        </div>
+
       </div>
 
-      <div class="event-location">
-        Նորավանք
-      </div>
-
-    </div>
-
-
-    <!-- RECEPTION -->
-    <div class="event">
-
-      <div class="event-icon">
-        🥂
-      </div>
-
-      <h3>
-        Հարսանեկան խնջույք
-      </h3>
-
-      <div class="event-time">
-        17:30
-      </div>
-
-      <div class="event-location">
-        Lider Complex Restaurant & Cafe
-      </div>
 
     </div>
 
   </section>
 
 
-  <!-- DRESS CODE -->
-  <section class="dress-section">
 
-    <div class="dress-code">
+  <!-- DRESS CODE -->
+
+  <section class="section dress-section">
+
+    <div class="dress-card">
 
       <h2>
         Դրես-կոդ՝ Էլեգանտ ✨
       </h2>
+
+      <div class="gold-line"></div>
 
       <p>
         <em>
@@ -384,7 +716,9 @@
   </section>
 
 
+
   <!-- FINAL -->
+
   <section class="final-section">
 
     <div class="heart">
@@ -392,15 +726,105 @@
     </div>
 
     <p>
+
       Անհամբեր սպասում ենք այս կարևոր օրը
       Ձեզ հետ կիսելուն։
+
+      <span class="final-names">
+        Ալիկ և Արևիկ
+      </span>
+
     </p>
 
-    <span class="final-names">
-      Ալիկ և Արևիկ
-    </span>
-
   </section>
+
+
+
+  <!-- COUNTDOWN SCRIPT -->
+
+  <script>
+
+    const weddingDate =
+      new Date("2026-10-03T14:00:00+04:00").getTime();
+
+
+    function updateCountdown() {
+
+      const now =
+        new Date().getTime();
+
+      const distance =
+        weddingDate - now;
+
+
+      if (distance <= 0) {
+
+        document.getElementById("days").innerHTML = "0";
+        document.getElementById("hours").innerHTML = "0";
+        document.getElementById("minutes").innerHTML = "0";
+        document.getElementById("seconds").innerHTML = "0";
+
+        return;
+      }
+
+
+      const days =
+        Math.floor(
+          distance / (1000 * 60 * 60 * 24)
+        );
+
+
+      const hours =
+        Math.floor(
+          (distance %
+            (1000 * 60 * 60 * 24))
+            /
+            (1000 * 60 * 60)
+        );
+
+
+      const minutes =
+        Math.floor(
+          (distance %
+            (1000 * 60 * 60))
+            /
+            (1000 * 60)
+        );
+
+
+      const seconds =
+        Math.floor(
+          (distance %
+            (1000 * 60))
+            /
+            1000
+        );
+
+
+      document.getElementById("days").innerHTML =
+        days;
+
+      document.getElementById("hours").innerHTML =
+        hours;
+
+      document.getElementById("minutes").innerHTML =
+        minutes;
+
+      document.getElementById("seconds").innerHTML =
+        seconds;
+
+    }
+
+
+    updateCountdown();
+
+    setInterval(
+      updateCountdown,
+      1000
+    );
+
+  </script>
+
 
 </body>
 
