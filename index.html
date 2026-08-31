@@ -89,6 +89,7 @@
 
     img {
       display: block;
+
       max-width: 100%;
     }
 
@@ -102,16 +103,21 @@
     }
 
     a {
-      -webkit-tap-highlight-color: transparent;
+      -webkit-tap-highlight-color:
+        transparent;
     }
 
     .container {
-      width: min(1140px, 92%);
-      margin: 0 auto;
+      width:
+        min(1140px, 92%);
+
+      margin:
+        0 auto;
     }
 
     .section {
-      padding: 100px 20px;
+      padding:
+        100px 20px;
     }
 
     .section-title {
@@ -120,20 +126,28 @@
       font-size:
         clamp(30px, 4vw, 48px);
 
-      font-weight: 400;
+      font-weight:
+        400;
 
-      line-height: 1.4;
+      line-height:
+        1.4;
 
-      color: var(--text);
+      color:
+        var(--text);
     }
 
     .gold-line {
-      width: 64px;
-      height: 1px;
+      width:
+        64px;
 
-      margin: 22px auto 34px;
+      height:
+        1px;
 
-      background: var(--accent);
+      margin:
+        22px auto 34px;
+
+      background:
+        var(--accent);
     }
 
 
@@ -142,53 +156,69 @@
     ===================================================== */
 
     .hero {
-      position: relative;
+      position:
+        relative;
 
-      min-height: 100vh;
-      min-height: 100svh;
+      min-height:
+        100vh;
 
-      display: flex;
+      min-height:
+        100svh;
 
-      align-items: center;
+      display:
+        flex;
 
-      justify-content: flex-end;
+      align-items:
+        center;
 
-      overflow: hidden;
+      justify-content:
+        flex-end;
 
-      background: #181310;
+      overflow:
+        hidden;
+
+      background:
+        #181310;
     }
 
 
     /* HERO IMAGE */
 
     .hero-image {
-      position: absolute;
+      position:
+        absolute;
 
-      inset: 0;
+      inset:
+        0;
 
-      width: 100%;
-      height: 100%;
+      width:
+        100%;
 
-      object-fit: cover;
+      height:
+        100%;
 
-      /*
-        Նկարը մի փոքր ձախ է տեղափոխված
-      */
+      object-fit:
+        cover;
 
-      object-position: 41% 28%;
+      object-position:
+        41% 28%;
     }
 
 
     /* HERO GRADIENT */
 
     .hero::after {
-      content: "";
+      content:
+        "";
 
-      position: absolute;
+      position:
+        absolute;
 
-      inset: 0;
+      inset:
+        0;
 
-      z-index: 1;
+      z-index:
+        1;
 
       background:
         linear-gradient(
@@ -204,26 +234,35 @@
     /* HERO CONTENT */
 
     .hero-content {
-      position: relative;
+      position:
+        relative;
 
-      z-index: 2;
+      z-index:
+        2;
 
-      width: min(620px, 44%);
+      width:
+        min(620px, 44%);
 
-      margin-right: 3vw;
+      margin-right:
+        3vw;
 
-      padding: 40px 10px;
+      padding:
+        40px 10px;
 
-      color: white;
+      color:
+        white;
 
-      text-align: center;
+      text-align:
+        center;
     }
 
 
     .hero-topline {
-      margin: 0 0 14px;
+      margin:
+        0 0 14px;
 
-      padding: 5px;
+      padding:
+        5px;
 
       font-family:
         "SHKDzeragir",
@@ -233,23 +272,29 @@
       font-size:
         clamp(30px, 3.5vw, 54px);
 
-      font-weight: normal;
+      font-weight:
+        normal;
 
-      line-height: 1.4;
+      line-height:
+        1.4;
 
-      color: white;
+      color:
+        white;
 
       text-shadow:
-        0 4px 20px rgba(0,0,0,0.40);
+        0 4px 20px
+        rgba(0,0,0,0.40);
     }
 
 
     /* HERO NAMES */
 
     .hero-names {
-      margin: 0;
+      margin:
+        0;
 
-      padding: 5px 0;
+      padding:
+        5px 0;
 
       font-family:
         "SHKDzeragir",
@@ -259,32 +304,41 @@
       font-size:
         clamp(82px, 9.5vw, 145px);
 
-      line-height: 0.95;
+      line-height:
+        0.95;
 
-      font-weight: normal;
+      font-weight:
+        normal;
 
-      color: white;
+      color:
+        white;
 
       text-shadow:
-        0 8px 28px rgba(0,0,0,0.44);
+        0 8px 28px
+        rgba(0,0,0,0.44);
     }
 
-    .hero-names .and-word {
-      display: block;
 
-      margin: 8px 0;
+    .hero-names .and-word {
+      display:
+        block;
+
+      margin:
+        8px 0;
 
       font-size:
         clamp(40px, 4.2vw, 62px);
 
-      line-height: 1;
+      line-height:
+        1;
     }
 
 
     /* HERO DATE */
 
     .hero-date {
-      margin-top: 28px;
+      margin-top:
+        28px;
 
       font-family:
         Georgia,
@@ -293,79 +347,107 @@
       font-size:
         clamp(30px, 3.3vw, 46px);
 
-      letter-spacing: 7px;
+      letter-spacing:
+        7px;
 
-      color: white;
+      color:
+        white;
 
       text-shadow:
-        0 4px 18px rgba(0,0,0,0.40);
+        0 4px 18px
+        rgba(0,0,0,0.40);
     }
 
 
     /* HERO BUTTON */
 
     .hero-button {
-      display: inline-flex;
+      display:
+        inline-flex;
 
-      align-items: center;
+      align-items:
+        center;
 
-      justify-content: center;
+      justify-content:
+        center;
 
-      margin-top: 30px;
+      margin-top:
+        30px;
 
-      padding: 14px 28px;
+      padding:
+        14px 28px;
 
       border:
-        1px solid rgba(255,255,255,0.92);
+        1px solid
+        rgba(255,255,255,0.92);
 
-      border-radius: 999px;
+      border-radius:
+        999px;
 
       background:
         rgba(255,255,255,0.08);
 
-      backdrop-filter: blur(6px);
+      backdrop-filter:
+        blur(6px);
 
-      color: white;
+      color:
+        white;
 
-      text-decoration: none;
+      text-decoration:
+        none;
 
       font-family:
         "Noto Sans Armenian",
         sans-serif;
 
-      font-size: 14px;
+      font-size:
+        14px;
 
-      transition: 0.28s ease;
+      transition:
+        0.28s ease;
     }
 
     .hero-button:hover {
-      background: white;
+      background:
+        white;
 
-      color: var(--dark);
+      color:
+        var(--dark);
 
-      transform: translateY(-2px);
+      transform:
+        translateY(-2px);
     }
 
 
     /* SCROLL ARROW */
 
     .scroll-arrow {
-      position: absolute;
+      position:
+        absolute;
 
-      left: 50%;
-      bottom: 20px;
+      left:
+        50%;
 
-      z-index: 3;
+      bottom:
+        20px;
 
-      transform: translateX(-50%);
+      z-index:
+        3;
 
-      color: white;
+      transform:
+        translateX(-50%);
 
-      font-size: 24px;
+      color:
+        white;
 
-      opacity: 0.85;
+      font-size:
+        24px;
 
-      animation: bounce 1.8s infinite;
+      opacity:
+        0.85;
+
+      animation:
+        bounce 1.8s infinite;
     }
 
     @keyframes bounce {
@@ -391,93 +473,122 @@
     ===================================================== */
 
     .invitation-section {
-      background: white;
+      background:
+        white;
     }
 
+
     .invitation-layout {
-      width: min(1450px, 94%);
+      width:
+        min(1450px, 94%);
 
-      margin: 0 auto;
+      margin:
+        0 auto;
 
-      display: grid;
+      display:
+        grid;
 
       grid-template-columns:
         minmax(0, 1.05fr)
         minmax(0, 1fr);
 
-      align-items: center;
+      align-items:
+        center;
 
-      gap: 60px;
+      gap:
+        60px;
     }
 
 
-    /* PHOTO 2
-       FULL PHOTO
-       NO FRAME
-       NO CROP
-    */
+    /* PHOTO 2 - FULL IMAGE */
 
     .invitation-photo {
-      width: 100%;
+      width:
+        100%;
 
-      display: flex;
+      display:
+        flex;
 
-      align-items: center;
+      align-items:
+        center;
 
-      justify-content: center;
+      justify-content:
+        center;
     }
 
+
     .invitation-photo img {
-      width: 100%;
+      width:
+        100%;
 
-      height: auto;
+      height:
+        auto;
 
-      object-fit: contain;
+      object-fit:
+        contain;
 
-      object-position: center;
+      object-position:
+        center;
 
-      border: 0;
+      border:
+        none;
 
-      border-radius: 0;
+      border-radius:
+        0;
 
-      box-shadow: none;
+      box-shadow:
+        none;
     }
 
 
     /* INVITATION TEXT */
 
     .invitation-content {
-      padding: 30px 20px;
+      padding:
+        30px 20px;
 
-      text-align: center;
+      text-align:
+        center;
     }
+
 
     .invitation-text {
-      max-width: 590px;
+      max-width:
+        590px;
 
-      margin: 0 auto;
+      margin:
+        0 auto;
 
-      font-size: 19px;
+      font-size:
+        19px;
 
-      line-height: 1.95;
+      line-height:
+        1.95;
 
-      font-weight: 300;
+      font-weight:
+        300;
 
-      color: var(--text);
+      color:
+        var(--text);
     }
 
+
     .invitation-date {
-      margin-top: 45px;
+      margin-top:
+        45px;
 
       font-family:
         Georgia,
         serif;
 
-      font-size: 36px;
+      font-size:
+        36px;
 
-      letter-spacing: 7px;
+      letter-spacing:
+        7px;
 
-      color: var(--accent-dark);
+      color:
+        var(--accent-dark);
     }
 
 
@@ -494,61 +605,80 @@
         );
     }
 
+
     .countdown-grid {
-      max-width: 760px;
+      max-width:
+        760px;
 
-      margin: 46px auto 0;
+      margin:
+        46px auto 0;
 
-      display: grid;
+      display:
+        grid;
 
       grid-template-columns:
         repeat(4, 1fr);
 
-      gap: 14px;
+      gap:
+        14px;
     }
 
+
     .countdown-item {
-      padding: 28px 10px;
+      padding:
+        28px 10px;
 
       background:
         rgba(255,255,255,0.72);
 
       border:
-        1px solid var(--border);
+        1px solid
+        var(--border);
 
-      border-radius: 18px;
+      border-radius:
+        18px;
 
       box-shadow:
         0 8px 22px
         rgba(0,0,0,0.03);
     }
 
+
     .countdown-number {
-      display: block;
+      display:
+        block;
 
       font-family:
         Georgia,
         serif;
 
-      font-size: 44px;
+      font-size:
+        44px;
 
-      line-height: 1;
+      line-height:
+        1;
 
-      color: var(--accent-dark);
+      color:
+        var(--accent-dark);
     }
 
-    .countdown-label {
-      display: block;
 
-      margin-top: 10px;
+    .countdown-label {
+      display:
+        block;
+
+      margin-top:
+        10px;
 
       font-family:
         "Noto Sans Armenian",
         sans-serif;
 
-      font-size: 12px;
+      font-size:
+        12px;
 
-      color: var(--muted);
+      color:
+        var(--muted);
     }
 
 
@@ -557,160 +687,211 @@
     ===================================================== */
 
     .program-section {
-      background: white;
+      background:
+        white;
     }
 
+
     .program-grid {
-      max-width: 960px;
+      max-width:
+        960px;
 
-      margin: 52px auto 0;
+      margin:
+        52px auto 0;
 
-      display: grid;
+      display:
+        grid;
 
       grid-template-columns:
         repeat(2, 1fr);
 
-      gap: 24px;
+      gap:
+        24px;
 
-      align-items: stretch;
+      align-items:
+        stretch;
     }
 
+
     .program-card {
-      min-height: 530px;
+      min-height:
+        530px;
 
-      padding: 48px 26px;
+      padding:
+        48px 26px;
 
-      display: flex;
+      display:
+        flex;
 
-      flex-direction: column;
+      flex-direction:
+        column;
 
-      align-items: center;
+      align-items:
+        center;
 
-      background: #f6f1eb;
+      background:
+        #f6f1eb;
 
       border:
-        1px solid var(--border);
+        1px solid
+        var(--border);
 
-      border-radius: 30px;
+      border-radius:
+        30px;
 
       box-shadow:
         0 12px 34px
         rgba(0,0,0,0.035);
     }
 
+
     .event-icon {
-      height: 48px;
+      height:
+        48px;
 
-      display: flex;
+      display:
+        flex;
 
-      align-items: center;
+      align-items:
+        center;
 
-      justify-content: center;
+      justify-content:
+        center;
 
-      margin-bottom: 14px;
+      margin-bottom:
+        14px;
 
-      font-size: 34px;
+      font-size:
+        34px;
     }
 
-
-    /* SAME TITLE LEVEL */
 
     .event-title {
-      min-height: 88px;
+      min-height:
+        88px;
 
-      margin: 0 0 14px;
+      margin:
+        0 0 14px;
 
-      display: flex;
+      display:
+        flex;
 
-      align-items: center;
+      align-items:
+        center;
 
-      justify-content: center;
+      justify-content:
+        center;
 
-      text-align: center;
+      text-align:
+        center;
 
-      font-size: 25px;
+      font-size:
+        25px;
 
-      line-height: 1.45;
+      line-height:
+        1.45;
 
-      font-weight: 400;
+      font-weight:
+        400;
     }
 
 
-    /* SAME TIME LEVEL */
-
     .event-time {
-      min-height: 54px;
+      min-height:
+        54px;
 
-      margin-bottom: 14px;
+      margin-bottom:
+        14px;
 
       font-family:
         Georgia,
         serif;
 
-      font-size: 38px;
+      font-size:
+        38px;
 
-      line-height: 1.2;
+      line-height:
+        1.2;
 
-      color: var(--accent);
+      color:
+        var(--accent);
     }
 
-
-    /* SAME PLACE LEVEL */
 
     .event-place {
-      min-height: 98px;
+      min-height:
+        98px;
 
-      display: flex;
+      display:
+        flex;
 
-      flex-direction: column;
+      flex-direction:
+        column;
 
-      align-items: center;
+      align-items:
+        center;
 
-      justify-content: flex-start;
+      justify-content:
+        flex-start;
 
-      text-align: center;
+      text-align:
+        center;
 
-      font-size: 18px;
+      font-size:
+        18px;
 
-      line-height: 1.7;
+      line-height:
+        1.7;
     }
 
 
-    /* SAME BUTTON LEVEL */
-
     .map-button {
-      margin-top: auto;
+      margin-top:
+        auto;
 
-      display: inline-flex;
+      display:
+        inline-flex;
 
-      align-items: center;
+      align-items:
+        center;
 
-      justify-content: center;
+      justify-content:
+        center;
 
-      padding: 13px 24px;
+      padding:
+        13px 24px;
 
       border:
-        1px solid var(--accent);
+        1px solid
+        var(--accent);
 
-      border-radius: 999px;
+      border-radius:
+        999px;
 
-      color: var(--text);
+      color:
+        var(--text);
 
-      text-decoration: none;
+      text-decoration:
+        none;
 
       font-family:
         "Noto Sans Armenian",
         sans-serif;
 
-      font-size: 14px;
+      font-size:
+        14px;
 
-      transition: 0.28s ease;
+      transition:
+        0.28s ease;
     }
 
-    .map-button:hover {
-      background: var(--accent);
 
-      color: white;
+    .map-button:hover {
+      background:
+        var(--accent);
+
+      color:
+        white;
     }
 
 
@@ -719,88 +900,116 @@
     ===================================================== */
 
     .dress-section {
-      background: var(--bg);
+      background:
+        var(--bg);
     }
 
+
     .dress-card {
-      max-width: 700px;
+      max-width:
+        700px;
 
-      margin: 0 auto;
+      margin:
+        0 auto;
 
-      padding: 56px 28px;
+      padding:
+        56px 28px;
 
       border:
-        1px solid var(--border);
+        1px solid
+        var(--border);
 
-      border-radius: 28px;
+      border-radius:
+        28px;
 
       background:
         rgba(255,255,255,0.55);
     }
 
+
     .dress-title {
-      margin: 0;
+      margin:
+        0;
 
       font-size:
         clamp(30px, 3.4vw, 42px);
 
-      font-weight: 400;
+      font-weight:
+        400;
     }
 
+
     .dress-text {
-      margin: 0;
+      margin:
+        0;
 
-      font-size: 18px;
+      font-size:
+        18px;
 
-      line-height: 1.8;
+      line-height:
+        1.8;
     }
 
 
     /* =====================================================
-       RSVP
+       RSVP SECTION
     ===================================================== */
 
     .rsvp-section {
-      background: white;
+      background:
+        white;
     }
 
 
     /*
-      RSVP PHOTO + TITLE
+      PHOTO 4 + INTRO
     */
 
     .rsvp-header {
-      max-width: 1080px;
+      max-width:
+        1080px;
 
-      margin: 0 auto 65px;
+      margin:
+        0 auto 65px;
 
-      display: grid;
+      display:
+        grid;
 
       grid-template-columns:
-        minmax(280px, 420px)
+        minmax(280px, 430px)
         minmax(0, 1fr);
 
-      align-items: center;
+      align-items:
+        center;
 
-      gap: 70px;
+      gap:
+        70px;
     }
 
 
     /* PHOTO 4 */
 
     .rsvp-photo {
-      width: 100%;
+      width:
+        100%;
     }
 
+
     .rsvp-photo img {
-      display: block;
+      display:
+        block;
 
-      width: 100%;
-      height: auto;
+      width:
+        100%;
 
-      object-fit: contain;
+      height:
+        auto;
 
-      border-radius: 24px;
+      object-fit:
+        contain;
+
+      border-radius:
+        24px;
 
       box-shadow:
         0 20px 50px
@@ -808,279 +1017,410 @@
     }
 
 
-    /* RSVP TITLE + TEXT */
+    /* RSVP TEXT */
 
     .rsvp-heading {
-      text-align: center;
+      text-align:
+        center;
     }
 
+
+    /*
+      BIGGER TEXT
+    */
+
     .rsvp-intro {
-      max-width: 590px;
+      max-width:
+        620px;
 
-      margin: 0 auto;
+      margin:
+        0 auto;
 
-      color: var(--muted);
+      color:
+        var(--text);
 
-      font-size: 18px;
+      font-size:
+        24px;
 
-      line-height: 1.9;
+      line-height:
+        1.8;
+
+      font-weight:
+        400;
+    }
+
+
+    .rsvp-intro::after {
+      content:
+        "";
+
+      display:
+        block;
+
+      width:
+        64px;
+
+      height:
+        1px;
+
+      margin:
+        35px auto 0;
+
+      background:
+        var(--accent);
     }
 
 
     /* RSVP FORM */
 
     .rsvp-form {
-      max-width: 680px;
+      max-width:
+        680px;
 
-      margin: 0 auto;
+      margin:
+        0 auto;
 
-      text-align: left;
+      text-align:
+        left;
     }
+
 
     .form-group {
-      margin-bottom: 24px;
+      margin-bottom:
+        24px;
     }
 
-    .form-label {
-      display: block;
 
-      margin-bottom: 10px;
+    .form-label {
+      display:
+        block;
+
+      margin-bottom:
+        10px;
 
       font-family:
         "Noto Sans Armenian",
         sans-serif;
 
-      font-size: 15px;
+      font-size:
+        15px;
 
-      font-weight: 500;
+      font-weight:
+        500;
     }
 
-
-    /* INPUTS */
 
     .form-input,
     .form-select,
     .form-textarea {
-      width: 100%;
+      width:
+        100%;
 
-      padding: 15px 16px;
+      padding:
+        15px 16px;
 
       border:
-        1px solid #ddd5cd;
+        1px solid
+        #ddd5cd;
 
-      border-radius: 12px;
+      border-radius:
+        12px;
 
-      background: #faf8f6;
+      background:
+        #faf8f6;
 
-      color: var(--text);
+      color:
+        var(--text);
 
-      font-size: 16px;
+      font-size:
+        16px;
 
-      outline: none;
+      outline:
+        none;
 
       transition:
         border-color 0.2s ease,
         box-shadow 0.2s ease;
     }
 
+
     .form-input:focus,
     .form-select:focus,
     .form-textarea:focus {
-      border-color: var(--accent);
+      border-color:
+        var(--accent);
 
       box-shadow:
         0 0 0 3px
         rgba(179,146,116,0.10);
     }
 
-    .form-textarea {
-      min-height: 120px;
 
-      resize: vertical;
+    .form-textarea {
+      min-height:
+        120px;
+
+      resize:
+        vertical;
     }
 
 
-    /* RADIO OPTIONS */
+    /* RADIO */
 
     .radio-group {
-      display: grid;
+      display:
+        grid;
 
-      gap: 10px;
+      gap:
+        10px;
     }
 
+
     .radio-option {
-      display: flex;
+      display:
+        flex;
 
-      align-items: center;
+      align-items:
+        center;
 
-      gap: 11px;
+      gap:
+        11px;
 
-      padding: 15px 16px;
+      padding:
+        15px 16px;
 
-      background: #faf8f6;
+      background:
+        #faf8f6;
 
       border:
-        1px solid #ddd5cd;
+        1px solid
+        #ddd5cd;
 
-      border-radius: 12px;
+      border-radius:
+        12px;
 
-      cursor: pointer;
+      cursor:
+        pointer;
 
       font-family:
         "Noto Sans Armenian",
         sans-serif;
 
-      transition: 0.2s ease;
+      transition:
+        0.2s ease;
     }
+
 
     .radio-option:hover {
-      border-color: var(--accent);
+      border-color:
+        var(--accent);
     }
+
 
     .radio-option input {
-      width: 17px;
-      height: 17px;
+      width:
+        17px;
 
-      flex: 0 0 auto;
+      height:
+        17px;
 
-      accent-color: var(--accent);
+      flex:
+        0 0 auto;
+
+      accent-color:
+        var(--accent);
     }
 
 
-    /* SUBMIT */
+    /* SUBMIT BUTTON */
 
     .submit-button {
-      width: 100%;
+      width:
+        100%;
 
-      margin-top: 10px;
+      margin-top:
+        10px;
 
-      padding: 17px;
+      padding:
+        17px;
 
-      border: none;
+      border:
+        none;
 
-      border-radius: 999px;
+      border-radius:
+        999px;
 
-      background: var(--dark);
+      background:
+        var(--dark);
 
-      color: white;
+      color:
+        white;
 
-      font-size: 14px;
+      font-size:
+        14px;
 
-      cursor: pointer;
+      cursor:
+        pointer;
 
-      transition: 0.25s ease;
+      transition:
+        0.25s ease;
     }
 
+
     .submit-button:hover {
-      transform: translateY(-2px);
+      transform:
+        translateY(-2px);
 
       box-shadow:
         0 10px 25px
         rgba(48,41,36,0.14);
     }
 
+
     .submit-button:disabled {
-      opacity: 0.6;
+      opacity:
+        0.6;
 
-      cursor: wait;
+      cursor:
+        wait;
 
-      transform: none;
+      transform:
+        none;
     }
 
 
     /* =====================================================
-       THANK YOU POPUP
+       THANK YOU
     ===================================================== */
 
     .thank-overlay {
-      position: fixed;
+      position:
+        fixed;
 
-      inset: 0;
+      inset:
+        0;
 
-      z-index: 9999;
+      z-index:
+        9999;
 
-      display: flex;
+      display:
+        flex;
 
-      align-items: center;
+      align-items:
+        center;
 
-      justify-content: center;
+      justify-content:
+        center;
 
-      padding: 20px;
+      padding:
+        20px;
 
       background:
         rgba(27,22,18,0.64);
 
-      backdrop-filter: blur(8px);
+      backdrop-filter:
+        blur(8px);
 
-      opacity: 0;
+      opacity:
+        0;
 
-      visibility: hidden;
+      visibility:
+        hidden;
 
-      transition: 0.35s ease;
+      transition:
+        0.35s ease;
     }
+
 
     .thank-overlay.show {
-      opacity: 1;
+      opacity:
+        1;
 
-      visibility: visible;
+      visibility:
+        visible;
     }
+
 
     .thank-card {
       width:
         min(460px, 100%);
 
-      padding: 54px 28px;
+      padding:
+        54px 28px;
 
-      background: #fffdfa;
+      background:
+        #fffdfa;
 
-      border-radius: 28px;
+      border-radius:
+        28px;
 
       box-shadow:
         0 30px 80px
         rgba(0,0,0,0.26);
     }
 
+
     .thank-heart {
-      margin-bottom: 15px;
+      margin-bottom:
+        15px;
 
-      font-size: 42px;
+      font-size:
+        42px;
 
-      color: var(--accent);
+      color:
+        var(--accent);
     }
+
 
     .thank-title {
-      margin: 0 0 14px;
+      margin:
+        0 0 14px;
 
-      font-size: 34px;
+      font-size:
+        34px;
 
-      font-weight: 400;
+      font-weight:
+        400;
     }
+
 
     .thank-text {
-      margin: 0;
+      margin:
+        0;
 
-      font-size: 16px;
+      font-size:
+        16px;
 
-      line-height: 1.85;
+      line-height:
+        1.85;
 
-      color: var(--muted);
+      color:
+        var(--muted);
     }
 
-    .thank-close {
-      margin-top: 28px;
 
-      padding: 12px 26px;
+    .thank-close {
+      margin-top:
+        28px;
+
+      padding:
+        12px 26px;
 
       border:
-        1px solid var(--accent);
+        1px solid
+        var(--accent);
 
-      border-radius: 999px;
+      border-radius:
+        999px;
 
-      background: transparent;
+      background:
+        transparent;
 
-      color: var(--text);
+      color:
+        var(--text);
 
-      cursor: pointer;
+      cursor:
+        pointer;
     }
 
 
@@ -1089,37 +1429,53 @@
     ===================================================== */
 
     .final-section {
-      padding: 100px 20px;
+      padding:
+        100px 20px;
 
-      background: var(--dark);
+      background:
+        var(--dark);
 
-      color: white;
+      color:
+        white;
     }
+
 
     .final-heart {
-      margin-bottom: 16px;
+      margin-bottom:
+        16px;
 
-      font-size: 30px;
+      font-size:
+        30px;
 
-      color: #d7bba1;
+      color:
+        #d7bba1;
     }
+
 
     .final-message {
-      max-width: 620px;
+      max-width:
+        620px;
 
-      margin: 0 auto;
+      margin:
+        0 auto;
 
-      font-size: 18px;
+      font-size:
+        18px;
 
-      line-height: 1.9;
+      line-height:
+        1.9;
     }
 
+
     .final-names {
-      display: block;
+      display:
+        block;
 
-      margin-top: 24px;
+      margin-top:
+        24px;
 
-      padding: 6px;
+      padding:
+        6px;
 
       font-family:
         "SHKDzeragir",
@@ -1129,16 +1485,18 @@
       font-size:
         clamp(46px, 5vw, 68px);
 
-      line-height: 1.3;
+      line-height:
+        1.3;
     }
 
 
     /* =====================================================
-       ANIMATIONS
+       ANIMATION
     ===================================================== */
 
     .reveal {
-      opacity: 0;
+      opacity:
+        0;
 
       transform:
         translateY(28px);
@@ -1148,19 +1506,25 @@
         transform 0.85s ease;
     }
 
+
     .reveal.visible {
-      opacity: 1;
+      opacity:
+        1;
 
       transform:
         translateY(0);
     }
 
+
     .delay-1 {
-      transition-delay: 0.12s;
+      transition-delay:
+        0.12s;
     }
 
+
     .delay-2 {
-      transition-delay: 0.22s;
+      transition-delay:
+        0.22s;
     }
 
 
@@ -1170,38 +1534,47 @@
 
     @media (max-width: 980px) {
 
+
       .hero-content {
         width:
           min(620px, 48%);
 
-        margin-right: 3vw;
+        margin-right:
+          3vw;
       }
 
-
-      /* INVITATION */
 
       .invitation-layout {
-        grid-template-columns: 1fr;
+        grid-template-columns:
+          1fr;
 
-        gap: 40px;
+        gap:
+          40px;
       }
+
 
       .invitation-photo {
         width:
           min(720px, 100%);
 
-        margin: 0 auto;
+        margin:
+          0 auto;
       }
 
-
-      /* RSVP */
 
       .rsvp-header {
         grid-template-columns:
           minmax(250px, 360px)
           1fr;
 
-        gap: 45px;
+        gap:
+          45px;
+      }
+
+
+      .rsvp-intro {
+        font-size:
+          21px;
       }
 
     }
@@ -1213,22 +1586,26 @@
 
     @media (max-width: 700px) {
 
+
       .section {
-        padding: 72px 16px;
+        padding:
+          72px 16px;
       }
 
 
-      /* =============================================
-         HERO MOBILE
-      ============================================= */
+      /* HERO MOBILE */
 
       .hero {
-        justify-content: center;
+        justify-content:
+          center;
       }
 
+
       .hero-image {
-        object-position: 38% 30%;
+        object-position:
+          38% 30%;
       }
+
 
       .hero::after {
         background:
@@ -1242,165 +1619,207 @@
 
 
       /*
-        TEXT DOWN TO AVOID FACES
+        TEXT LOWER ON MOBILE
       */
 
       .hero-content {
-        width: 94%;
+        width:
+          94%;
 
-        max-width: 100%;
+        max-width:
+          100%;
 
-        margin: 0 auto;
+        margin:
+          0 auto;
 
-        padding: 30px 10px;
+        padding:
+          30px 10px;
 
         transform:
           translateY(12vh);
       }
+
 
       .hero-topline {
         font-size:
           clamp(24px, 8vw, 38px);
       }
 
+
       .hero-names {
         font-size:
           clamp(62px, 19vw, 96px);
       }
+
 
       .hero-names .and-word {
         font-size:
           clamp(28px, 8vw, 44px);
       }
 
+
       .hero-date {
-        margin-top: 22px;
+        margin-top:
+          22px;
 
         font-size:
           clamp(23px, 6.5vw, 32px);
 
-        letter-spacing: 4px;
+        letter-spacing:
+          4px;
       }
+
 
       .hero-button {
-        padding: 13px 22px;
+        padding:
+          13px 22px;
 
-        font-size: 13px;
+        font-size:
+          13px;
       }
 
 
-      /* =============================================
-         INVITATION MOBILE
-      ============================================= */
+      /* INVITATION MOBILE */
 
       .invitation-layout {
-        width: 100%;
+        width:
+          100%;
 
-        gap: 36px;
+        gap:
+          36px;
       }
+
 
       .invitation-photo {
-        width: 100%;
+        width:
+          100%;
       }
+
 
       .invitation-photo img {
-        width: 100%;
+        width:
+          100%;
 
-        height: auto;
+        height:
+          auto;
 
-        object-fit: contain;
-
-        object-position: center;
+        object-fit:
+          contain;
       }
+
 
       .invitation-content {
-        padding: 10px 5px;
+        padding:
+          10px 5px;
       }
+
 
       .section-title {
         font-size:
           clamp(28px, 9vw, 38px);
       }
 
-      .invitation-text {
-        font-size: 16px;
 
-        line-height: 1.9;
+      .invitation-text {
+        font-size:
+          16px;
+
+        line-height:
+          1.9;
       }
+
 
       .invitation-date {
-        margin-top: 35px;
+        margin-top:
+          35px;
 
-        font-size: 27px;
+        font-size:
+          27px;
 
-        letter-spacing: 4px;
+        letter-spacing:
+          4px;
       }
 
 
-      /* =============================================
-         COUNTDOWN MOBILE
-      ============================================= */
+      /* COUNTDOWN MOBILE */
 
       .countdown-grid {
         grid-template-columns:
           repeat(2, 1fr);
 
-        gap: 10px;
+        gap:
+          10px;
 
-        margin-top: 35px;
+        margin-top:
+          35px;
       }
+
 
       .countdown-item {
-        padding: 20px 8px;
+        padding:
+          20px 8px;
       }
+
 
       .countdown-number {
-        font-size: 34px;
+        font-size:
+          34px;
       }
 
 
-      /* =============================================
-         PROGRAM MOBILE
-      ============================================= */
+      /* PROGRAM MOBILE */
 
       .program-grid {
-        grid-template-columns: 1fr;
+        grid-template-columns:
+          1fr;
       }
+
 
       .program-card {
-        min-height: auto;
+        min-height:
+          auto;
 
-        padding: 38px 20px;
+        padding:
+          38px 20px;
       }
+
 
       .event-title,
       .event-time,
       .event-place {
-        min-height: auto;
+        min-height:
+          auto;
       }
+
 
       .event-title {
-        font-size: 22px;
+        font-size:
+          22px;
       }
+
 
       .event-time {
-        font-size: 32px;
+        font-size:
+          32px;
       }
+
 
       .event-place {
-        margin-bottom: 24px;
+        margin-bottom:
+          24px;
 
-        font-size: 16px;
+        font-size:
+          16px;
       }
 
 
-      /* =============================================
-         DRESS MOBILE
-      ============================================= */
+      /* DRESS */
 
       .dress-card {
-        padding: 42px 18px;
+        padding:
+          42px 18px;
       }
+
 
       .dress-title {
         font-size:
@@ -1408,75 +1827,105 @@
       }
 
 
-      /* =============================================
-         RSVP MOBILE
-      ============================================= */
+      /* RSVP MOBILE */
 
       .rsvp-header {
-        grid-template-columns: 1fr;
+        grid-template-columns:
+          1fr;
 
-        gap: 35px;
+        gap:
+          36px;
 
-        margin-bottom: 48px;
+        margin-bottom:
+          50px;
       }
+
 
       .rsvp-photo {
-        width: 100%;
+        width:
+          100%;
 
-        max-width: 430px;
+        max-width:
+          430px;
 
-        margin: 0 auto;
+        margin:
+          0 auto;
       }
+
 
       .rsvp-photo img {
-        width: 100%;
+        width:
+          100%;
 
-        height: auto;
+        height:
+          auto;
 
-        object-fit: contain;
-
-        border-radius: 18px;
+        border-radius:
+          18px;
       }
+
 
       .rsvp-heading {
-        padding: 0 5px;
+        padding:
+          0 6px;
       }
+
 
       .rsvp-intro {
-        font-size: 16px;
+        max-width:
+          500px;
 
-        line-height: 1.85;
+        font-size:
+          18px;
+
+        line-height:
+          1.8;
       }
+
+
+      .rsvp-intro::after {
+        margin-top:
+          28px;
+      }
+
 
       .rsvp-form {
-        width: 100%;
+        width:
+          100%;
       }
+
 
       .form-input,
       .form-select,
       .form-textarea {
-        font-size: 16px;
+        font-size:
+          16px;
       }
+
 
       .submit-button {
-        font-size: 12px;
+        padding:
+          16px 8px;
 
-        padding: 16px 8px;
+        font-size:
+          12px;
       }
 
 
-      /* =============================================
-         FINAL MOBILE
-      ============================================= */
+      /* FINAL MOBILE */
 
       .dress-text,
       .final-message {
-        font-size: 16px;
+        font-size:
+          16px;
       }
 
+
       .final-section {
-        padding: 80px 18px;
+        padding:
+          80px 18px;
       }
+
 
       .final-names {
         font-size:
@@ -1487,7 +1936,7 @@
 
 
     /* =====================================================
-       REDUCE MOTION
+       REDUCED MOTION
     ===================================================== */
 
     @media (prefers-reduced-motion: reduce) {
@@ -1495,15 +1944,19 @@
       *,
       *::before,
       *::after {
-        animation: none !important;
+        animation:
+          none !important;
 
-        transition: none !important;
+        transition:
+          none !important;
       }
 
       .reveal {
-        opacity: 1;
+        opacity:
+          1;
 
-        transform: none;
+        transform:
+          none;
       }
 
     }
@@ -1599,8 +2052,6 @@
     <div class="invitation-layout">
 
 
-      <!-- PHOTO 2 -->
-
       <div class="invitation-photo reveal">
 
 
@@ -1613,8 +2064,6 @@
       </div>
 
 
-
-      <!-- TEXT -->
 
       <div class="invitation-content reveal delay-1">
 
@@ -1718,7 +2167,6 @@
         </div>
 
 
-
         <div class="countdown-item">
 
 
@@ -1742,7 +2190,6 @@
         </div>
 
 
-
         <div class="countdown-item">
 
 
@@ -1764,7 +2211,6 @@
 
 
         </div>
-
 
 
         <div class="countdown-item">
@@ -1824,7 +2270,6 @@
 
 
       </div>
-
 
 
       <div class="program-grid">
@@ -1998,7 +2443,7 @@
 
 
   <!-- =====================================================
-       RSVP
+       RSVP AREA
   ===================================================== -->
 
   <section class="section rsvp-section">
@@ -2007,12 +2452,10 @@
     <div class="container">
 
 
-      <!-- PHOTO 4 + RSVP TEXT -->
+      <!-- PHOTO + LARGE TEXT -->
 
       <div class="rsvp-header">
 
-
-        <!-- SELFIE -->
 
         <div class="rsvp-photo reveal">
 
@@ -2027,19 +2470,7 @@
 
 
 
-        <!-- RSVP TITLE -->
-
         <div class="rsvp-heading reveal delay-1">
-
-
-          <h2 class="section-title">
-
-            RSVP
-
-          </h2>
-
-
-          <div class="gold-line"></div>
 
 
           <div class="rsvp-intro">
@@ -2064,15 +2495,13 @@
 
 
 
-      <!-- RSVP FORM -->
+      <!-- FORM -->
 
       <form
         id="rsvpForm"
         class="rsvp-form reveal"
       >
 
-
-        <!-- ATTENDANCE -->
 
         <div class="form-group">
 
@@ -2129,8 +2558,6 @@
 
 
 
-        <!-- SIDE -->
-
         <div class="form-group">
 
 
@@ -2186,8 +2613,6 @@
 
 
 
-        <!-- NAME -->
-
         <div class="form-group">
 
 
@@ -2214,8 +2639,6 @@
         </div>
 
 
-
-        <!-- GUEST COUNT -->
 
         <div class="form-group">
 
@@ -2265,8 +2688,6 @@
 
 
 
-        <!-- MESSAGE -->
-
         <div class="form-group">
 
 
@@ -2291,8 +2712,6 @@
         </div>
 
 
-
-        <!-- SUBMIT -->
 
         <button
           id="submitButton"
@@ -2424,9 +2843,7 @@
   <script>
 
 
-    /* =====================================================
-       COUNTDOWN
-    ===================================================== */
+    /* COUNTDOWN */
 
     const weddingDate =
       new Date(
@@ -2546,9 +2963,7 @@
 
 
 
-    /* =====================================================
-       SCROLL ANIMATION
-    ===================================================== */
+    /* SCROLL ANIMATION */
 
     const revealElements =
       document.querySelectorAll(
@@ -2600,26 +3015,23 @@
       );
 
 
-    revealElements
-      .forEach(
+    revealElements.forEach(
 
-        function(element) {
-
-
-          observer.observe(
-            element
-          );
+      function(element) {
 
 
-        }
+        observer.observe(
+          element
+        );
 
-      );
+
+      }
+
+    );
 
 
 
-    /* =====================================================
-       RSVP GOOGLE SHEETS
-    ===================================================== */
+    /* RSVP GOOGLE SHEETS */
 
     const GOOGLE_SCRIPT_URL =
 
@@ -2650,157 +3062,178 @@
       );
 
 
-    rsvpForm
-      .addEventListener(
+    rsvpForm.addEventListener(
 
-        "submit",
+      "submit",
 
-        async function(event) {
+      async function(event) {
 
 
-          event.preventDefault();
+        event.preventDefault();
 
 
-          submitButton.disabled =
-            true;
+        submitButton.disabled =
+          true;
 
 
-          submitButton.textContent =
+        submitButton.textContent =
 
-            "ՈՒՂԱՐԿՎՈՒՄ Է...";
+          "ՈՒՂԱՐԿՎՈՒՄ Է...";
 
 
-          const formData =
-            new FormData(
-              rsvpForm
-            );
+        const formData =
+          new FormData(
+            rsvpForm
+          );
 
 
-          const data = {
+        const data = {
 
 
-            attendance:
-              formData.get(
-                "attendance"
-              ),
+          attendance:
+            formData.get(
+              "attendance"
+            ),
 
 
-            side:
-              formData.get(
-                "side"
-              ),
+          side:
+            formData.get(
+              "side"
+            ),
 
 
-            name:
-              formData.get(
-                "name"
-              ),
+          name:
+            formData.get(
+              "name"
+            ),
 
 
-            guests:
-              formData.get(
-                "guests"
-              ),
+          guests:
+            formData.get(
+              "guests"
+            ),
 
 
-            message:
-              formData.get(
-                "message"
-              )
+          message:
+            formData.get(
+              "message"
+            )
 
 
-          };
+        };
 
 
-          try {
+        try {
 
 
-            await fetch(
+          await fetch(
 
-              GOOGLE_SCRIPT_URL,
+            GOOGLE_SCRIPT_URL,
 
-              {
+            {
 
-                method:
-                  "POST",
+              method:
+                "POST",
 
-                mode:
-                  "no-cors",
+              mode:
+                "no-cors",
 
-                body:
-                  JSON.stringify(
-                    data
-                  )
+              body:
+                JSON.stringify(
+                  data
+                )
 
-              }
+            }
 
-            );
+          );
 
 
-            rsvpForm.reset();
+          rsvpForm.reset();
 
 
-            thankOverlay
-              .classList
-              .add("show");
+          thankOverlay
+            .classList
+            .add("show");
 
 
-            setTimeout(
+          setTimeout(
 
-              function() {
+            function() {
 
 
-                thankOverlay
-                  .classList
-                  .remove("show");
+              thankOverlay
+                .classList
+                .remove("show");
 
 
-              },
+            },
 
-              7000
+            7000
 
-            );
-
-
-          }
-
-
-          catch(error) {
-
-
-            alert(
-
-              "Չհաջողվեց ուղարկել պատասխանը։ Խնդրում ենք կրկին փորձել։"
-
-            );
-
-
-          }
-
-
-          submitButton.disabled =
-            false;
-
-
-          submitButton.textContent =
-
-            "ՀԱՍՏԱՏԵԼ ՄԱՍՆԱԿՑՈՒԹՅՈՒՆԸ";
+          );
 
 
         }
 
-      );
+
+        catch(error) {
+
+
+          alert(
+
+            "Չհաջողվեց ուղարկել պատասխանը։ Խնդրում ենք կրկին փորձել։"
+
+          );
+
+
+        }
+
+
+        submitButton.disabled =
+          false;
+
+
+        submitButton.textContent =
+
+          "ՀԱՍՏԱՏԵԼ ՄԱՍՆԱԿՑՈՒԹՅՈՒՆԸ";
+
+
+      }
+
+    );
 
 
 
-    /* CLOSE THANK YOU */
+    /* CLOSE POPUP */
 
-    thankClose
-      .addEventListener(
+    thankClose.addEventListener(
 
-        "click",
+      "click",
 
-        function() {
+      function() {
+
+
+        thankOverlay
+          .classList
+          .remove("show");
+
+
+      }
+
+    );
+
+
+    thankOverlay.addEventListener(
+
+      "click",
+
+      function(event) {
+
+
+        if (
+          event.target ===
+          thankOverlay
+        ) {
 
 
           thankOverlay
@@ -2810,37 +3243,10 @@
 
         }
 
-      );
 
+      }
 
-
-    /* CLICK OUTSIDE */
-
-    thankOverlay
-      .addEventListener(
-
-        "click",
-
-        function(event) {
-
-
-          if (
-            event.target ===
-            thankOverlay
-          ) {
-
-
-            thankOverlay
-              .classList
-              .remove("show");
-
-
-          }
-
-
-        }
-
-      );
+    );
 
 
   </script>
